@@ -1,2 +1,2 @@
 # PDRO
-The prescription of Drugs Ontology
+The Prescription of Drugs Ontology
