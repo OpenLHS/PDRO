@@ -1,0 +1,20 @@
+[URI of the OWL(RDF/XML) output file]
+http://purl.obolibrary.org/obo/PDRO/imports/VO_import.owl
+
+[Source ontology]
+VO
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/VO_0000574 #route of administration
+includeAllChildren
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/BFO_0000029 #site
+
+[Source term retrieval setting]
+includeAllIntermediates
+
+[Source annotation URIs]
+includeAllAnnotationProperties
+
+[Source annotation URIs to be excluded]

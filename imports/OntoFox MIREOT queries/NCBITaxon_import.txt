@@ -1,0 +1,20 @@
+[URI of the OWL(RDF/XML) output file]
+http://purl.obolibrary.org/obo/PDRO/imports/NCBITaxon_import.owl
+
+[Source ontology]
+NCBITaxon
+
+[Low level source term URIs]
+http://purl.obolibrary.org/obo/NCBITaxon_9606 #Homo sapiens
+
+[Top level source term URIs and target direct superclass URIs]
+http://purl.obolibrary.org/obo/NCBITaxon_9606 #Homo sapiens
+subClassOf http://purl.obolibrary.org/obo/OBI_0100026 #organism
+
+[Source term retrieval setting]
+includeNoIntermediates
+
+[Source annotation URIs]
+includeAllAxioms
+
+[Source annotation URIs to be excluded]

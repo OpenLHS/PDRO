@@ -1,0 +1,3011 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
+     xmlns:PDRO="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <Ontology rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl">
+        <versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl/16.05.15"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/OMRSE_import.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/VO_import.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/OBI_import.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/NCBITaxon_import.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/DRON_import.owl"/>
+        <imports rdf:resource="http://purl.obolibrary.org/obo/iao/2015-02-23/iao.owl"/>
+        <dc:creator>Jean-François Ethier</dc:creator>
+        <rdfs:comment xml:lang="en">An ontology of drug prescriptions</rdfs:comment>
+        <dc:creator>Ryeyan Taseen</dc:creator>
+        <dc:creator>Adrien Barton</dc:creator>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_note -->
+
+    <AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#precedes -->
+
+    <ObjectProperty rdf:about="http://www.obofoundry.org/ro/ro.owl#precedes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000133 -->
+
+    <DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000133">
+        <rdfs:label>has minimum range value</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000134 -->
+
+    <DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000134">
+        <rdfs:label>has maximum range value</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DRON_00000031 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DRON_00000031">
+        <obo:IAO_0000115 xml:lang="en">a treatment that has as participants an extended organism and a drug product and that results in part of the drug product being located in the extended organism.</obo:IAO_0000115>
+        <PDRO:PDRO_note xml:lang="en">We suggest that drug administration be removed as a subclass of treatment or that it be renamed drug treatment.
+
+1. Not all administrations of a drug product to an organism are an instance of treatment. They could be for example, for prophylaxis, for diagnosis, etc.
+
+2. Not all instances of drug administrations in a treatment satisfy the definition of treatment, where it would need to result in an alleviation of signs/symptoms. (e.g. first dose administration of an antibiotic).</PDRO:PDRO_note>
+        <rdfs:label xml:lang="fr">administration de dose</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000969 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000969">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                <someValuesFrom>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010031"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010035"/>
+                        </unionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="fr">spécification de dose</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000090 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000090">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <someValuesFrom>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                            <Restriction>
+                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <someValuesFrom>
+                                    <Class>
+                                        <intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+                                            <Restriction>
+                                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010018"/>
+                                            </Restriction>
+                                        </intersectionOf>
+                                    </Class>
+                                </someValuesFrom>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000103 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000103">
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <someValuesFrom>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                            <Restriction>
+                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <someValuesFrom>
+                                    <Class>
+                                        <intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+                                            <Restriction>
+                                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010019"/>
+                                            </Restriction>
+                                        </intersectionOf>
+                                    </Class>
+                                </someValuesFrom>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000000 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since a drug dispensing process.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis une distribution de médicaments.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">time elapsed since dispensing statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une distribution</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000001 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000302"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000003"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000005"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000142"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000085"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;For patient: Mr Smith, should exercise for at least 30 minutes, 3 times weekly. signed Dr. Ronnie Shuz. Date: 15/11/01&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A document authored by a health care provider that specifies how to realize some health care process for a particular patient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un document créé par un fournisseur de soin indiquant comment réaliser une partie d&apos;un processus de santé pour un patient particulier.</obo:IAO_0000115>
+        <oboInOwl:hasSynonym>prescription</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">health care prescription</rdfs:label>
+        <rdfs:label xml:lang="fr">prescription de santé</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000002 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An author identification where the author is a particular health care provider and the document authored is a prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une identification d&apos;auteur où l&apos;auteur est un fournisseur de soins particulier et le document en question est une prescription.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">identification de prescripteur</rdfs:label>
+        <rdfs:label xml:lang="en">prescriber identification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000003 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A written name denoting a particular patient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un nom écrit faisant référence à un patient particulier.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">identification d&apos;un patient</rdfs:label>
+        <rdfs:label xml:lang="en">patient identification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000004 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000119"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="fr">La masse d&apos;un aggrégat d&apos;ingrédient actif.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The mass of an active ingredient aggregate.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">active ingredient aggregate mass</rdfs:label>
+        <rdfs:label xml:lang="fr">masse d&apos;aggrégat d&apos;ingrédient actif</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000005 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that denotes the time of document creation.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité textuelle indiquant l&apos;instant de création d&apos;un document.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">the granular time at which the author considers the document whole, ie ready for interpretation</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">document creation time identification</rdfs:label>
+        <rdfs:label xml:lang="fr">identification de l&apos;instant de création d&apos;un document</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000006 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000006">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000005"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000001"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A document creation time identification where the document is a prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une identification de l&apos;instant de création d&apos;un document qui est une prescription médicale.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">health care prescription time identification</rdfs:label>
+        <rdfs:label xml:lang="fr">identification du temps de création d&apos;une prescription médicale</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000007 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000101"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <rdfs:label xml:lang="en">absolute change of rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies a characteristic of a drug product that is prescribed.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">prescribed drug product characteristic specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A data item that is about a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément de données qui fournit une information sur un médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug product information item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information sur un médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000012 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000012">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000090"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000039"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>John Smith taking 1 mg of Ativan from his dosette every 12 hours, alleviating the anxiety produced by his usual routine at a long-term care facility, as hypothesized by his physician, Dr. Hazard.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A treatment composed of one or more dose administrations.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un traitement composé d&apos;une ou plusieurs administrations de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug treatment</rdfs:label>
+        <rdfs:label xml:lang="fr">traitement médicamenteux</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000019 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000148"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&quot;5 PM on January 1st 2016&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label xml:lang="fr">spécification d&apos;instant temporel</rdfs:label>
+        <rdfs:label xml:lang="en">temporal instant specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000020 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000031"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010080"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&quot;IM or IV&quot; in &quot;Administrate IM or IV&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the route(s) of administration of a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité informationnelle indiquant la ou les voies d&apos;administration d&apos;un médicament.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">mode of administration specification</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">route of administration specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de voie d&apos;administration</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001929"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000004"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;1 mg&quot; (of lorazepam), &quot;5 mg&quot; (of metoprolol)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A mass value specification that specifies the mass of an active ingredient aggegate.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de masse indiquant la masse d&apos;un aggrégat d&apos;ingrédient actif.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">active ingredient mass value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur de masse d&apos;ingrédient actif</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000022 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;80mg&quot; in &quot;Aspirin 80mg oral tablet&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity thatspecifies the strength of a prescribed drug product.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug strength specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000024 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000001"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010022"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000142"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;Prescription for John Smith : Ativan 2mg tablets, take 1 tablet twice daily by mouth as needed if anxious, dispense 60 tablets, renew 12 times. Signed by Dr Hazard. Date: 15/10/29&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A health care prescription specifying how to realize a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une ordonnance indiquant une administration de médicaments.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug prescription</rdfs:label>
+        <rdfs:label xml:lang="fr">prescription de médicaments</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000026 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010031"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010035"/>
+                        </unionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product information item that is about one or more magnitudes of biological activity, masses or quantities of active ingredient aggregate per unit quantity of a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information sur un médicament à propos de une ou plusieurs magnitudes d&apos;activité biologique, masses ou quantités d&apos;aggrégat d&apos;ingrédient actif par unité de médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug strength item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information de force médicamenteuse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000027 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000027">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000026"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>&quot;1 mg of lorazepam per tablet&quot;
+&quot;21 mg of nicotine per patch&quot;
+&quot;This tablet contains 12.5 mg of hydrochlorothiazide and 4 mg of perindopril&quot; is one instance of drug strength per discrete dose form, that has part two active ingredient mass specifications.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A drug strength item where the unit quantity is a discrete solid dose form.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information de force médicamenteuse où l&apos;unité de quantité de médicament est une forme de dose médicamenteuse solide et discrète.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug strength per discrete dose form item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information de force médicamenteuse par forme discrète</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000028 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000028">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000026"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>&quot;500 mg/mL liquid&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A drug strength item where the unit quantity is a unit of volume.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information de force médicamenteuse où l&apos;unité de quantité de médicament est une unité de volume.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug strength per volume unit item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information de force médicamenteuse par unité de volume</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000029 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000029">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000026"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>&quot;60 mg/g powder&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A drug strength item where the unit quantity is the mass of the drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information de force médicamenteuse où l&apos;unité de quantité de médicament est une unité de masse.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug strength per mass unit item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information de force médicamenteuse par unité de masse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000030 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000034"/>
+        <obo:IAO_0000111 xml:lang="en">duration of dose administration specification</obo:IAO_0000111>
+        <obo:IAO_0000112>&quot;inject over 30 seconds&quot;
+&quot;infuse over 12 hours&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the duration during which a dose should be administered continuously.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">This class is meant to be used in cases where the quantity of drug product to be delivered during a single dose administration is prescribed in advance and the dose administration process has a clear end in time relative to the beginning of the process (such that if one knows the instant it started, one would know the instant it ended and vice versa). e.g. 500cc of NS over 2 hours x1</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">duration of administration specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de durée d&apos;administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000034 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000112"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010034"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&apos;begin administration at 50cc/h&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the initial rate at which a dose should be administered.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">initial rate of administration specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de débit initial d&apos;administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000036 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&quot;lorazepam&quot; in &quot;This tablet of Ativan 1 mg contains lorazepam&quot;
+&quot;acetaminophen&quot; in &quot;This tablet of Tylenol 500mg contains acetaminophen&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product information item that is about an active ingredient in a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information sur un médicament dénotant un de ses ingrédients.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug active ingredient item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information d&apos;ingrédient médicamenteux</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000037 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000044"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0012001"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000054"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;Lopresor&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product name given to a non-generic drug product by the pharmaceutical company that produces it</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un nom de médicament non-générique donné par l&apos;entreprise pharmaceutique qui le produit.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">nom propriétaire d&apos;un médicament non-générique</rdfs:label>
+        <rdfs:label xml:lang="en">non-generic drug product proprietary name</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000038 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011"/>
+        <obo:IAO_0000112 xml:lang="en">eg. oral tablet, topical cream, IV liquid, oral liquid</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product information item that is about a dose form of a drug product</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information sur un médicament concernant sa forme (par exemple pilule orale, crème topique, liquide intraveineux, liquide oral).</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This will need to be divided into an item referring to the 3D configuration of a dose and an item referring to the vehicle that dose is contained in.</obo:IAO_0000116>
+        <obo:IAO_0000118>dose form item</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">drug dose form item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information de forme médicamenteuse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000039 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <obo:IAO_0000112 xml:lang="en">John Smith swallowing a 1mg lorazepam tablet.
+The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Harry Thymia</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A process that has as participants an extended organism and a drug product and that results in a specified portion of the drug product (a single dose) being located in the extended organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus ayant comme participants un organisme étendu et un médicament, à l&apos;issue de laquelle une certaine dose du médicament est localisée dans l&apos;organisme étendu.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This class should be re-classified under DRON:drug administration if it is made a subclass of process. See PDRO note in drug administration.</obo:IAO_0000116>
+        <rdfs:label xml:lang="fr">administration de dose</rdfs:label>
+        <rdfs:label xml:lang="en">dose administration</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000040 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000024"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;agitation is observed&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing a sign being observed in an individual.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant un signe observé par un individu.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">presence of sign statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant la présence d&apos;un signe</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040"/>
+        <obo:IAO_0000112 xml:lang="en">the current hour is before 5 PM on January 1st 2016</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <obo:IAO_0000115 xml:lang="en">A current time statement where the current time is described in relation to an interval of time.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">interval of time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle relativement à un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000043 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is less than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some time elapsed since previous dose statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000044 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that allows the identification of a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité textuelle qui fait référence à un type de médicament.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Note that this is a brand name of a drug product, not the name of an active ingredient contained in a drug product.</obo:IAO_0000116>
+        <obo:IAO_0000118>drug name</obo:IAO_0000118>
+        <obo:IAO_0000118>drug product identification</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">drug product name</rdfs:label>
+        <rdfs:label xml:lang="fr">nom de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000050 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label xml:lang="en">day of the week</rdfs:label>
+        <rdfs:label xml:lang="fr">jour de la semaine</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000051 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;oral tablet&quot; in &quot;aspirin 80mg oral tablet&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the dose form of a prescribed drug product.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dose form specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000052 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies an excipient of a prescribed drug product.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug excipient specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000053 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000009"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&quot;aspirin&quot; in &quot;aspirin 80mg oral tablet&quot;
+(since 80mg refers to the quantity of aspirin in the drug product, the drug active ingredient specification can also be interpreted as &quot;aspirin 80 mg&quot;, i.e., &quot;80 mg of aspirin&quot;)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies an active ingredient in a prescribed drug product.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug active ingredient specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000054 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000044"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0020006"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>Apo-Metoprolol</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product name given to a generic drug product by the pharmaceutical company that produces it</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un nom de médicament générique donné par l&apos;entreprise pharmaceutique qui le produit.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">generic drug product proprietary name</rdfs:label>
+        <rdfs:label xml:lang="fr">nom propriétaire d&apos;un médicament générique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000055 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000055">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
+        <obo:IAO_0000112 xml:lang="en">it is before 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">current time is before some instant statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle avant un instant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000056 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
+        <obo:IAO_0000112 xml:lang="en">it is after 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">current time is after some instant statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle après un instant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000057 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
+        <obo:IAO_0000112 xml:lang="en">it is 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">current time is some instant statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé affirmant que l&apos;instant présent est un instant donné</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000058 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000058">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is greater than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some time elapsed since previous dose statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000059 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is equal to some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">exactly some time elapsed since previous dose statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000006 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000044"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002"/>
+                        </unionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">prescription drug product specification</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">&quot;Aspirin 80mg oral tablet&quot;
+&quot;Amiodarone 50mg/mL injectable solution&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity specifying a class of drug product intended to be administered in a drug administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug product specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000060 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112>&quot;The current day is before the 2nd of August 2015.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time takes place before some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle avant un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000061 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000061">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label xml:lang="fr">moment de la journée</rdfs:label>
+        <rdfs:label xml:lang="en">time of the day</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000062 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000062">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label xml:lang="fr">mois de l&apos;année</rdfs:label>
+        <rdfs:label xml:lang="en">month of the year</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000063 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000063">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;It is the first month of the year 2016.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time starts some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle au début d&apos;un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000064 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000064">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;The current hour is during the afternoon of the 1st of January 2016.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time is during some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle pendant un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000065 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112>&quot;It is the last day of the current week.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time finishes some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle à la fin d&apos;un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000066 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000066">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A category value specification that specifies one day of the week.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">day of the week category specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000067 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000067">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112>&quot;The current year is after 2015.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time takes place after some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle après un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000068 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000011"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A drug product information item that is about one excipient in a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un élément d&apos;information sur un médicament dénotant un de ses excipients.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug excipient item</rdfs:label>
+        <rdfs:label xml:lang="fr">élément d&apos;information d&apos;excipient médicamenteuse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000069 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;The current week overlaps with the 2nd of August 2016.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time overlaps with some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle à cheval sur un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000070 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since the first dose administration of some drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis la première administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">time elapsed since first dose statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une première administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since the previous dose administration of some drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis la dernière administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">time elapsed since previous dose statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une précédente administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000019"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A current time statement where the current time is described in relation to a temporal instant.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé sur la période actuelle situant la période actuelle relativement à un instant donné.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">instant of time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle relativement à un instant</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000073 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;The current date is the 1st of January 2016.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time is equal to some interval statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé affirmant que la période actuelle est un intervalle de temps donné</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000074 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000102"/>
+        <obo:IAO_0000115 xml:lang="en">A health care facility whose function is to store, prepare, dispense, and monitor the usage of pharmaceutical drugs among patients in a given area or encountered in a given health care provider organization.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un établissement de santé qui a pour fonction d&apos;entreposer, préparer, distribuer et surveiller l&apos;utilisation des médicaments parmi les patients d&apos;une zone géographique donnée ou suivis dans une organisation de soin donnée.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">pharmacy facility</rdfs:label>
+        <rdfs:label xml:lang="fr">établissement de pharmacologie</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000075 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;It is the day before the second tuesday of the current month.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time meets before some interval of time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle juste avant un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000076 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;It is the month after january 2015.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">current time meets after some interval of time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé situant la période actuelle juste après un intervalle de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000077 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000029"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that allows the identification of an excipient</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité textuelle qui permet l&apos;identification d&apos;un excipient</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">excipient name</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010037"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the number of doses administered in some drug administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">number of doses in drug administration statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000079 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where exactly some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">exactly some number of doses in drug administration statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000008 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <obo:IAO_0000112 xml:lang="en">A pharmacist selecting a package of Aspirin 81mg oral tablets from the pharmacy inventory shelf.
+A nurse selecting an ampoule of amiodarone 50mg/mL injectable solution from the ward&apos;s stock of drugs.
+A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from the free sample drug stock cabinet.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A process where a health care provider physically selects a particular drug product as specified in a drug product specification.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus dans lequel un fournisseur de soin sélectionne physiquement un médicament particulier comme indiqué sur une spécification de médicament.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Note that a doctor does not select a particular drug when prescribing unless they provide the actual drug with the prescription. They specify a drug product that is about the collection of drug products that are appropriate for a prescribed drug administration.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">drug selection</rdfs:label>
+        <rdfs:label xml:lang="fr">sélection de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000080 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000111"/>
+        <disjointWith rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000081"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <obo:IAO_0000115 xml:lang="en">An action specification that specifies to increase the rate at which a dose is being administered by some amount.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">increase rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000081 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000111"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <obo:IAO_0000115 xml:lang="en">An action specification that specifies to decrease the rate at which a dose is being administered by some amount.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">decrease rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000082 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where less than some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some number of doses have occured statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000083 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where greater than some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some number of doses have occured statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000085 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000085">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000011"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A human with a patient role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un humain ayant un rôle de patient.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">patient</rdfs:label>
+        <rdfs:label xml:lang="fr">patient</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000086 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000086">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000013"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A human with a physician role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un human ayant un rôle de médecin.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">médecin</rdfs:label>
+        <rdfs:label xml:lang="en">physician</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000087 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000087">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000088"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A human with a pharmacist role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un humain ayant un rôle de pharmacien.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">pharmacien</rdfs:label>
+        <rdfs:label xml:lang="en">pharmacist</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000088 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000012"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A health care provider role where the service provided is that of identification, preparation, dispensing and monitoring of pharmaceutical drugs.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un role de prestataire de soin qui fournit un service d&apos;identification, de préparation, de distribution et de contrôle de médicaments.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">pharmacist role</rdfs:label>
+        <rdfs:label xml:lang="en">rôle de pharmacien</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000089 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000089">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000014"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A human with a nurse role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un humain ayant un rôle d&apos;infirmier.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">infirmier</rdfs:label>
+        <rdfs:label xml:lang="en">nurse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000009 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <obo:IAO_0000112 xml:lang="en">A nurse injecting 9mL of amiodarone 50mg/mL in 250 mL of D5 solution.
+A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A process in which a drug product is modified in order to render it more suitable for patient administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus dans lequel un médicament est modifié de manière à le rendre plus approprié pour une administration au patient.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug preparation</rdfs:label>
+        <rdfs:label xml:lang="fr">préparation de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;it is the day after the end of the drug administration specified by &quot;Prednisone 10mg PO die x 1 week&quot;&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some process.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some process statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000091 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some drug administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some drug administration statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000092 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some dose administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some dose administration statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000093 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some surgery.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some surgery statement</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000094 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000111 xml:lang="en">anatomical site of dose administration specification</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies an anatomical entity which should be in contact with the drug product being administered during a dose administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">site of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000096 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">a normative specification that authorizes the dispensing of a drug product under certain conditions and usually specifies how much of the drug should be dispensed at a time.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug dispensing specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000097 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000578"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A Drug Identification Number (DIN) is a computer-generated eight digit number assigned by Health Canada to a drug product prior to being marketed in Canada. It uniquely identifies all drug products sold in a dosage form in Canada and is located on the label of prescription and over-the-counter drug products that have been evaluated and authorized for sale in Canada.
+
+A DIN uniquely identifies the following product characteristics: manufacturer; product name; active ingredient(s); strength(s) of active ingredient(s); pharmaceutical form; route of administration.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">DIN</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">http://www.hc-sc.gc.ca/dhp-mps/prodpharma/activit/fs-fi/dinfs_fd-eng.php</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">From wikipedia: 
+Any product defined as a drug under the Canadian Food and Drugs Act must have an associated Drug Identification Number (or DIN).
+
+The Drug Identification Number (DIN) is the 8 digit number located on the label of prescription and over-the-counter drug products that have been evaluated by the Therapeutic Products Directorate (TPD) and approved for sale in Canada. The DIN is typically an eight digit number.
+
+Once a drug has been approved, the Therapeutic Products Directorate issues a DIN which permits the manufacturer to market the drug in Canada. For drugs where there is minimal market history in Canada, there is a more stringent review and the drug is required to have a Notice of Compliance and a DIN in order to be marketed in Canada.
+
+A DIN lets the user know that the product has undergone and passed a review of its formulation, labeling and instructions for use. A drug product sold in Canada without a DIN is not in compliance with Canadian law.
+
+The DIN is also a tool to help in the follow-up of products on the market, recall of products, inspections, and quality monitoring. A drug product can be looked up via its DIN with the Health Canada&apos;s Drug Product Database (DPD) to find specific information of drugs approved by the Ministry.</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">Drug Identification Number</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000099 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010003"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;1 metered dose actuation of nitroglycerine&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A natural number value specification that specifies a number of metered dose actuations.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">metered dose actuation count value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000010 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <someValuesFrom>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                            <Restriction>
+                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000096"/>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">A pharmacy technician providing a package of 30 Aspirin 81mg oral tablets to a patient.
+A technician working at a hospital pharmacy sending 3 3mL ampoules of amiadorone 50 mg/mL injectable solution to a ward as part of a prescription for inpatient Harry Thymia.
+A doctor providing a patient with a Respimat Inhaler device containing 60 puffs of Spiriva, 2.5mcg per puff.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">A planned process in which a health care provider or person who is part of a health care organization provides a determinate quantity of a particular drug product for use in a particular patient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus planifié pendant lequel un professionnel de santé ou une personne faisant partie d&apos;une organisation de santé fournit une quantité déterminée d&apos;un médicament particulier à destination d&apos;un patient particulier.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">The person who is part of a health care organization may be e.g., a representative of an internet company which sends prescribed medication.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">drug dispensing process</rdfs:label>
+        <rdfs:label xml:lang="fr">processus de distribution de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000101 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000001"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010034"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">rate of administration conditional specification</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">e.g. start perfusion at 10cc/h. if MAP &lt; 65 mmHg, then increase rate by 1cc/h every 5 minutes. If MAP=&gt;65 mmHg, then decrease rate by 1cc/h every 5 minutes.
+
+Here there are two rate of administration conditional specifications:
+&apos;if MAP &lt; 65 mmHg, then increase rate...every 5 minutes&apos; and
+&apos;If MAP&gt;=65 mmHg, then decrease rate...every 5 minutes&apos;
+
+(&apos;every 5 minutes&apos; is a condition: &apos;if 5 minutes have elapsed since the previous change&apos;)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A conditional specification where a rate of administration should change if some condition(s) is/are satisfied.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">change rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000102 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103"/>
+                            <Restriction>
+                                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000034"/>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000101"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">e.g. start perfusion at 15cc/h. if MAP &lt; 65 mmHg, then increase rate by 5cc/h every 5 minutes. If MAP=&gt;65 mmHg, then decrease rate by 5cc/h every 5 minutes.
+
+There are two rate of administration plan specifications here, one for each change specified:
+&apos;if MAP &lt; 65 mmHg, then increase rate by 5cc/h every 5 minutes.&apos; and 
+&apos;If MAP&gt;=65 mmHg, then decrease rate by 5cc/h every 5 minutes&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">a plan specification that instructs how the rate at which a dose is administered should be changed based on certain conditions in order to maintain a certain equilibrium or targeted effect.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">perfusion rate plan specification</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">rate of administration plan specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000131"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000127"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000019"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A normative specification that directs the dosing in a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Sig.</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">dosing instructions</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">posological instructions</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">prescribed dosing specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000111 xml:lang="en">normative directive information entity</obo:IAO_0000111>
+        <obo:IAO_0000115 xml:lang="en">A directive information entity that specifies how to realize a normative process</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">normative specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000108 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000109"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">The portion of a drug product that an organism is exposed to.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dose of drug product</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000109 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000109">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A material entity that is the proper part of a drug product.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">portion of drug product</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000110 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">supervising prescriber identification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000111 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000101"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
+        <rdfs:label xml:lang="en">relative change of rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000112 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label>rate of administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000113 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label>rational number value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000114 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A category value specification that specifies one site of administration from a standardized list of possible sites.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">site of administration category specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000115 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label>mass per time unit</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000117 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000133"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000134"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies the minimum and maximum quantities of drug product or active ingredient that can be administered as a dose in a dose administration.</obo:IAO_0000115>
+        <rdfs:label>dose range specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000119 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000119">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000576"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000028"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>Metoprolol tartrate</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A scattered molecular aggregate with the role of active ingredient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un aggrégat de molécule dispersée avec le rôle d&apos;ingrédient actif.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Should be moved to DRON</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">active ingredient aggregate</rdfs:label>
+        <rdfs:label xml:lang="fr">aggrégat d&apos;ingrédient actif</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000012 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000010"/>
+        <obo:IAO_0000112 xml:lang="en">John Smith being dispensed 60 Ativan 1mg oral tablets a 10th time as specified in the same prescription.
+
+John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after having being dispensed in september 30x metoprolol 100 mg oral tablets.</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A drug dispensing process that follows an initial drug dispensing process, such that both processes are specified in the same drug prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus de distribution de médicament qui suit un processus de distribution initial, lorsque les deux processus sont indiqués dans la même prescription médicale.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug renewal process</rdfs:label>
+        <rdfs:label xml:lang="fr">processus de renouvellement de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000120 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000120">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000576"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000029"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000112>The water in a solution of injectable amiodarone.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="fr">Un aggrégat de molécule dispersée ayant le rôle d&apos;excipient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">scattered molecular aggregate with the role of excipient</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Should be moved to DRON</obo:IAO_0000116>
+        <rdfs:label xml:lang="fr">aggrégat d&apos;excipient</rdfs:label>
+        <rdfs:label xml:lang="en">excipient aggregate</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000121 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000121">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <rdfs:label>mass per time value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000123 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that specifies how a dose is quantified in a dose administration.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">This part of a prescription usually specifies a fixed amount (like &apos;50 mg&apos; or &apos;500 mL&apos;), but may instead specify a rate in some situations, e.g., in ongiong IV perfusions, where the total dose that will be administered in a single dose is unkown until the administration has ended. In either situation, the dose quantification specification is what enables the calculation of the quantity of active ingredient or drug product in the dose that is administered</obo:IAO_0000600>
+        <rdfs:label>dose quantification specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000124 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A dose quantification specification that quantifies a dose by referring to the quantity of active ingredient administered in a dose administration.</obo:IAO_0000115>
+        <rdfs:label>active ingredient quantification specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000125 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000123"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A dose quantification specification that quantifies a dose by referring to the quantity of drug product administered in a dose administration.</obo:IAO_0000115>
+        <rdfs:label>drug product quantification specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000126 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000121"/>
+        <obo:IAO_0000112>8 mcg/min (of norepinephrine)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="en">active ingredient mass delivery rate value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000127 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A condition for continuing a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">continuing condition</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">continuing drug administration condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000128 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000128">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;if bronchitis&apos;
+&apos;if January 1 2016&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A condition for starting a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">starting condition</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">starting drug administration condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement whose truthfullness is a prerequisite for something</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000131 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000106"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">conditional normative specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000136 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000136">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A prescribed dosing specification where the dose administration(s) specified is/are permitted and not obligatory while the condition is true.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">permitted dosing specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000139 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000139">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000058"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;every 6 hours&apos; in &apos;every 6 hours PRN&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true only if the amount of time that has elapsed since the previous dose is greater than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">minimum dosing interval condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000141 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000141">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A prescribed dosing specification where the dose administration(s) specified is/are obligatory while the condition is true.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">obligatory dosing specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000144 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000144">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010022"/>
+        <obo:IAO_0000115 xml:lang="en">A drug administration specification where the drug administration is obligatory if the starting condition is true.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">obligatory drug administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000145 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000145">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010022"/>
+        <obo:IAO_0000115 xml:lang="en">A drug administration specification where the drug administration is permitted and not obligatory if the starting condition is true.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">permitted drug administration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000146 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000146">
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010050"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;maximum 4g/24h&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true only if the amount of drug product administered has not exceeded a certain amount per unit of time.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">maximum dosage condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;less than 3 doses have been taken today&apos;
+&apos;8 hours have elapsed since the previous dose&apos;
+&apos;it is wednesday&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A condition for the taking of a dose.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dosing condition</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000150 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010004"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000096"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000012"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&quot;1 dispensing per month&quot;
+&quot;12 dispensings per year&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A value specification that specifies the frequency of a drug dispensing.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de fréquence indiquant la fréquence d&apos;un processus de distribution de médicament.
+Elle a une unité de la forme &quot;distribution de médicament par unité de temps&quot;.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">Has unit label of the form &apos;drug dispensings per unit time&apos;.
+nb. &quot;#30 renew x12&quot;, has as part a drug dispensing count specification, not a drug dispensing frequency specification.
+
+This is because the dispensing process is not specified to occur &apos;per unit of time&apos;; it is specified to occur &apos;a number of times&apos;.</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">drug dispensing frequency specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de fréquence de distribution de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000151 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000151">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010003"/>
+        <obo:IAO_0000112>&quot;12 dispensings&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A natural number value specification that specifies a number of dispensing processes.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur entière qui indique un nombre de distributions de médicaments.</obo:IAO_0000115>
+        <obo:IAO_0000116>&quot;Dispense 30 tabs, not renewable&quot; -&gt; 1 dispensing
+&quot;Dispense 30 tabs, dispense 12 times&quot; -&gt; 12 dispensings
+&quot;Dispense 30 tabs, repeatable 12 times&quot; -&gt;13 dispensings
+&quot;Dispense 30 tabs, renew 12 times&quot; -&gt; 13 dispensings
+&quot;Dispense 30 tabs every month for one year&quot; -&gt; 12 dispensings</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">drug dispensing count specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de nombre de distributions de médicaments</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000016 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000010"/>
+        <obo:IAO_0000112 xml:lang="en">John Smith being dispensed 60x Ativan 1mg oral tablets for the first time</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A drug dispensing process that is the first time the patient is being provided with a particular drug following a particular prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus de distribution de médicament tel que ce médicament n&apos;a jamais été fourni au patient auparavant sur la base de cette prescription particulière.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">initial drug dispensing process</rdfs:label>
+        <rdfs:label xml:lang="fr">processus de distribution de médicament initiale</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000019 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000123"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">drug dose administration specification</obo:IAO_0000111>
+        <obo:IAO_0000112>&quot;1 tablet by mouth&quot;
+&quot;Mix 4g powder with 1 cup of water and drink slowly&quot;
+&quot;mix 450mg in 250mL of D5% solution, then administrate IV over 12 hours&quot;
+&quot;nebulize 2.5mg and administrate inhaled over 5-15 minutes&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">An action specification that describes a dose administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification d&apos;action qui décrit une administration de dose médicamenteuse.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dose administration specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification d&apos;administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010003 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000112>&quot;3 pregnancies to term&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A scalar value specification where the numeral is a natural number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire où le nombre est un entier naturel.</obo:IAO_0000115>
+        <rdfs:label>natural number value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur entière</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010004 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000105"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A scalar value specification that specifies the frequency of a process.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire indiquant la fréquence d&apos;un processus.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">frequency value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur de fréquence</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010007 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010007">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000103"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000039"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A prophylaxis composed of one or more dose administrations.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une prophylaxie composée d&apos;une ou plusieurs administrations de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug prophylaxis</rdfs:label>
+        <rdfs:label xml:lang="fr">prophylaxie médicamenteuse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010008 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010008">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                        <someValuesFrom>
+                            <Class>
+                                <intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000017"/>
+                                    <Restriction>
+                                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                        <someValuesFrom>
+                                            <Class>
+                                                <intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+                                                    <Restriction>
+                                                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
+                                                    </Restriction>
+                                                </intersectionOf>
+                                            </Class>
+                                        </someValuesFrom>
+                                    </Restriction>
+                                </intersectionOf>
+                            </Class>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000085"/>
+            </Restriction>
+        </equivalentClass>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A process in which the administration of a drug product as prescribed is hypothesized to achieve some health care objective.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un processus pendant lequel une ou plusieurs administrations de dose est supposée remplir un certain objectif de santé.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">Note that we do not consider all drug administrations to be treatments, as in the case of prophylaxis.
+
+A health care objective could concern e.g., treatment, prophylaxis and contraception. We leave open the question of whether it should include objectives such as physician-assisted suicide.</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">need to align with DRON</obo:IAO_0000116>
+        <rdfs:label xml:lang="fr">administration de médicament</rdfs:label>
+        <rdfs:label xml:lang="en">prescribed drug administration</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+        <obo:IAO_0000112>&quot;The alleviation of a symptomatic cough&quot;
+&quot;The prevention of malaria&quot;
+&quot;The diagnosis of what ails John Smith&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">An objective specification that specifies the objective of a health care process.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification d&apos;objectif d&apos;un processus de soin ou d&apos;une de ses parties.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">health care objective specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification d&apos;objectif de santé</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010017 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000096"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000010"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                <someValuesFrom>
+                    <Class>
+                        <unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025"/>
+                        </unionOf>
+                    </Class>
+                </someValuesFrom>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&apos;30 tablets&apos; in &apos;dispense 30 tablets&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that describes the amount of a drug product to dispense in a single drug dispensing process.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité informationnelle qui indique la quantité de médicament à distribuer pendant un processus de distribution unique.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">drug dispensing quantity specification</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">drug dispensing amount specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de la quantité de médicament à distribuer</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010018 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification d&apos;objectif de santé de traitement.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">spécification d&apos;objectif de traitement</rdfs:label>
+        <rdfs:label>treatment objective specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010019 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification d&apos;objectif de santé prophylactique.</obo:IAO_0000115>
+        <rdfs:label>prophylaxis objective specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification d&apos;objectif prophylactique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010020 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010010"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification d&apos;objectif de santé diagnostique.</obo:IAO_0000115>
+        <rdfs:label>diagnostic objective specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification d&apos;objectif diagnostique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010021 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A value specification that specifies the volume of some thing.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur qui indique un volume.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">spécification de valeur de volume</rdfs:label>
+        <rdfs:label xml:lang="en">volume value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010022 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000131"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_000006"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000103"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000128"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000111 xml:lang="en">prescribed drug administration specification</obo:IAO_0000111>
+        <obo:IAO_0000112>&quot;take Aspirin 81 mg oral tablet, 1 tablet once daily by mouth, start today, Dispense 30 tabs every month for one year&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A normative specification that specifies how to perform a drug administration.
+
+It specifies:
+- The drug product
+- The posology
+- The condition(s) for starting</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité informationnelle directive indiquant l&apos;administration d&apos;un médicament.
+
+Elle indique :
+- le médicament.
+- le(s) condition(s) de distribution du médicament.
+- la quantité de médicament à distribuer.
+- le(s) condition(s) de début d&apos;administration du médicament.
+- le(s) condition(s) de continuation d&apos;administration du médicament
+- le(s) condition(s) d&apos;administration d&apos;une dose
+- comment administrer une dose, ce qui inclut:
+-- Toute préparation du médicament requise avant l&apos;administration.
+-- La dose à administrer.
+-- Le mode d&apos;administration
+-- Toute particularité dans la manière d&apos;administrer le médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug administration specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification d&apos;administration préscrite de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000113"/>
+        <obo:IAO_0000112>&quot;10 capsules&quot;
+&quot;1 patch&quot;
+&quot;1/2 tablet&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A value specification that specifies an amount of drug product objects.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur entière qui indique un nombre de médicaments</obo:IAO_0000115>
+        <obo:IAO_0000116>The unit label here is a &apos;discrete drug object&apos; (capsules, tablets, patches, etc.)</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">drug product object count specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de nombre de médicaments</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010021"/>
+        <obo:IAO_0000115 xml:lang="en">A volume value specification where the volume specified is that of a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de volume indiquant le volume d&apos;un médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug product volume value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur de volume de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001929"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A mass value specification that specifies the mass of a drug product.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de masse qui indique la masse d&apos;un médicament.</obo:IAO_0000115>
+        <rdfs:label>drug product mass value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur de masse de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000112>e=entity
+r=relationship
+
+&quot;Unicorns exist&quot;
+
+e1: a single horned animal
+e2: an equestrian animal
+e3: spatial region of universe
+
+r1: e1 is a e2
+r2: e1 located in e3
+
+&quot;You have chest pain&quot;
+
+e1: chest pain
+e2: patient referred to by &apos;you&apos;
+r1: e2 experiencing e1
+
+&quot;The traffic light is green&quot;
+&quot;You have not taken a dose in the last 6 hours&quot;
+&quot;less than 12 dispensings have occurred&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that describes some relationships between some entities and is intended to be evaluated as true or false.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000112>&quot;1 hour&quot;
+&quot;15 minutes&quot;
+&quot;30 seconds&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A scalar value specification that specifies a duration of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire qui indique une durée de temps.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">spécification de durée temporelle</rdfs:label>
+        <rdfs:label xml:lang="en">temporal duration specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010030 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010004"/>
+        <obo:IAO_0000112>&quot;4 dose administrations per day&quot;
+&quot;2 dose administrations per hour&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A value specification of the frequency of a dose administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de fréquence indiquant la fréquence d&apos;un processus d&apos;administration de dose.
+Elle a une unité de la forme &quot;administrations de dose par unité de temps&quot;.</obo:IAO_0000115>
+        <obo:IAO_0000600 xml:lang="en">Has a unit label of the form &apos;dose administrations per unit time&apos;.</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">dose administration frequency specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de fréquence d&apos;administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010031 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010036"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876003"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112 xml:lang="en">&apos;5000 units&apos; (of fragmin)
+&apos;10 units&apos; (of insulin)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A scalar value specification that specifies the value of an active ingredient aggregate biological activity.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire qui indique la valeur d&apos;activité biologique d&apos;un aggrégat d&apos;ingrédient actif.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">pharmacological unit value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur d&apos;unité pharmacologique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010032 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115>A scalar value specification that specifies the quantity of an element or compound with uniform disposition.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">spécification de quantité de substance</rdfs:label>
+        <rdfs:label xml:lang="en">substance quantity value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010033 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
+        <obo:IAO_0000112>&apos;50mL per hour&apos;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
+        <obo:IAO_0000115 xml:lang="en">A scalar value specification whose unit label is a volumetric rate unit.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire dont l&apos;unité est une unité de rythme.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">spécification de valeur de rythme</rdfs:label>
+        <rdfs:label xml:lang="en">volumetric flow rate value specification</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010034 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010033"/>
+        <obo:IAO_0000112 xml:lang="en">&apos;80cc per hour&apos; (of NS, which is NaCl + water)</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A rate value specification that specifies the rate at which a drug product is administered during a dose administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur de rythme qui indique le rythme auquel un médicament est administré pendant une administration de dose.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">drug product volumetric flow rate value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur de rythme de médicament</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010035 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010032"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A substance value specification where the substance is an active ingredient aggregate.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de quantité de substance où la substance est un aggrégat d&apos;ingrédient actif.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">active ingredient molar value specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de valeur molaire d&apos;ingrédient actif</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010036 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+        <obo:IAO_0000111>pharmacological international unit</obo:IAO_0000111>
+        <obo:IAO_0000112>the &quot;units&quot; in 10 units of insulin</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A measurement unit label for the amount of a substance based on a specified biological activity or effect of that substance.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un label d&apos;unité de mesure pour la quantité de substance fondé sur une activité biologique spécifiée ou sur un effet de cette substance.</obo:IAO_0000115>
+        <rdfs:label>pharmacological unit</rdfs:label>
+        <rdfs:label xml:lang="fr">unité pharmacologique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010037 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010003"/>
+        <obo:IAO_0000112>&quot;3 dose administration&quot;
+&quot;1 dose administration&quot;</obo:IAO_0000112>
+        <obo:IAO_0000115 xml:lang="en">A natural number value specification that specifies a number of dose administrations.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une spécification de valeur entière qui indique un nombre d&apos;administrations de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dose administration count specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de nombre d&apos;administrations de doses</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010038 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000020"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;You have chest pain&quot;
+&quot;You are having trouble breathing&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing a symptom being experienced by an individual.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant un symptôme expérimenté par un individu.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">presence of symptom statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant la présence d&apos;un symptôme</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010039 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <obo:IAO_0000112>&quot;patient is asleep&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the state of conciousness of an organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant l&apos;état de conscience d&apos;un organisme.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">state of consciousness statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant un état de concience</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <obo:IAO_0000112>&quot;The current time is 4:00 PM.&quot;
+&quot;The current day is monday.&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement localizing the current time period relative to some other time period.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé situant la période actuelle relativement à une autre période.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">current time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé sur la période actuelle</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;2 weeks have elapsed since returning from travel&quot;
+&quot;14 days have elapsed since the start of treatment&quot;
+&quot;6 hours have elapsed since the previous dose&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the amount of time that has elapsed since an event.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le temps écoulé depuis un évènement.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">time elapsed statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé de temps écoulé</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010037"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the number of dose administrations that have occured over a given duration of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre d&apos;administration de doses qui se sont produites pendant une certaine durée de temps.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">number of doses per unit time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé décrivant le nombre de doses par unité de temps</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010043 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
+        <obo:IAO_0000112>&quot;less than 3 dose administrations have occured in the last 15 minutes&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses statement where the number of dose administrations having occured is less than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant inférieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some number of doses per unit time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est inférieur à</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010044 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
+        <obo:IAO_0000112>&quot;greater than 1 dose has occured in the last 6 hours&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses statement where the number of dose administrations having occured is greater than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant supérieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some number of doses per unit time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est supérieur à</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010045 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
+        <obo:IAO_0000112>&quot;1 dose administration has occured in the last day&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of doses statement where a specified number of dose administrations have occured.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant égal à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">exactly some number of doses per unit time statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est égal à</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000151"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the number of dispensings that have occurred as part of a certain prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé d&apos;une prescription décrivant un nombre de distributions passées.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">number of dispensings statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant un nombre de distributions passées</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010048 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010048">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046"/>
+        <obo:IAO_0000112>&quot;Less than one dispensing has occurred&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A number of dispensings statement where the number of dispensings having occurred is less than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de nombre de distributions indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some number of dispensings statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010029"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <someValuesFrom>
+                            <Class>
+                                <unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000021"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010023"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010024"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010025"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010031"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010035"/>
+                                </unionOf>
+                            </Class>
+                        </someValuesFrom>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>&quot;10 units of insulin have been administered in the last hour&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A statement describing the amount of drug product or active ingredient that has been administered in a given duration of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant la quantité de médicament ou d&apos;ingrédient actif qui a été administrée pendant une certaine période de temps.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">total dosage statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé de dosage total</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010050 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010050">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is less or equal to a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est inférieur ou égal à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than or equal to total dosage statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé de dosage total inférieur ou égal à une certaine quantité</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010051 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is greater than a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est supérieur à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than total dosage statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé de dosage total supérieur à une certaine quantité</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010052 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010052">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is equal to a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est égal à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">equal to total dosage statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé de dosage total égal à une certaine quantité</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;6 hours have elapsed since the previous dose of metoprolol 50mg oral tablets&quot;</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since a dose administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">time elapsed since dose statement</rdfs:label>
+        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une administration de dose</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010080 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onClass rdf:resource="http://purl.obolibrary.org/obo/VO_0000574"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A category value specification that specifies one route of administration from a standardized list of possible routes.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">route of administration category specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de la catégorie de la voie d&apos;administration</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0012001 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0012001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label xml:lang="fr">médicament non-générique</rdfs:label>
+        <rdfs:label>non-generic drug product</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0020006 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0020006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <rdfs:label>generic drug product</rdfs:label>
+        <rdfs:label xml:lang="fr">médicament générique</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0033203 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0033203">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002"/>
+        <obo:IAO_0000111 xml:lang="en">International Nonproprietary Name</obo:IAO_0000111>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">An active ingredient name that is an International Nonproprietary Name.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un nom d&apos;ingrédient actif qui est un International Nonproprietary Name.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">We may require the addition of an INNM class in the future.</obo:IAO_0000116>
+        <obo:IAO_0000119 xml:lang="en">http://www.who.int/medicines/services/inn/innguidance/en/</obo:IAO_0000119>
+        <obo:IAO_0000600 xml:lang="en">&quot;INN are selected in principle only for single, well-defined substances that can be unequivocally characterized by a chemical name (or formula). It is the policy of the INN programme not to select names for mixtures of substances, while substances that are not fully characterized are included in the INN system in exceptional cases only. INN are not selected for herbal substances (vegetable drugs) or for homoeopathic products. It is also the policy of the INN programme not to select names for those substances that have a long history of use for medical purposes under well-established names such as those of alkaloids (e.g. morphine, codeine), or trivial chemical names (e.g. acetic acid).
+
+An INN is usually designated for the active part of the molecule only, to avoid the multiplication of entries in cases where several salts, esters, etc. are actually used. In such cases, the user of the INN has to create a modified INN (INNM) himself ; mepyramine maleate (a salt of mepyramine with maleic acid) is an example of an INNM. When the creation of an INNM would require the use of a long or inconvenient name for the radical part of the INNM, the INN programme will select a short name for such a radical (for example, mesilate for methanesulfonate).&quot;</obo:IAO_0000600>
+        <rdfs:label>INN name</rdfs:label>
+        <rdfs:label xml:lang="fr">nom INN</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0040002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000028"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that allows the identification of an active ingredient</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une entité textuelle qui permet l&apos;identification d&apos;un ingrédient actif.</obo:IAO_0000115>
+        <rdfs:label>active ingredient name</rdfs:label>
+        <rdfs:label xml:lang="fr">nom d&apos;ingrédient actif</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876001 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000039"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>The configuration of a tablet after it has been crushed and dissolved in a glass of water.
+
+The configuration of a tablet before it has been administered</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="fr">La configuration d&apos;un médicament juste avant qu&apos;il soit administré.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The configuration of a drug product just before it is administered.</obo:IAO_0000115>
+        <obo:IAO_0000116>This configuration may have been the result of some drug preparation.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">administration dose form</rdfs:label>
+        <rdfs:label xml:lang="fr">forme de la dose d&apos;administration</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876002 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000039"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/DRON_00000005"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="fr">La configuration d&apos;un médicament à la fin d&apos;un processus de production pharmaceutique.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The configuration of a drug product at the end of a pharmaceutical production process.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This needs to be eventually distinguished with drug product vehicles.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">drug product dose form</rdfs:label>
+        <rdfs:label xml:lang="fr">forme de dose médicamenteuse</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876003 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_9876003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000052"/>
+                <someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000119"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000112>The active ingredient aggregate strength in the active ingredient aggregate of 10 units of Humalog insulin</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <obo:IAO_0000115>A quality inhering in an active ingredient aggregate by virtue of the magnitude of a standardized biological effect of that active ingredient.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une qualité inhérent dans un aggrégat d&apos;ingrédient actif en vertu d&apos;une magnitude d&apos;effet biologique standardisé de cet ingrédient actif.</obo:IAO_0000115>
+        <obo:IAO_0000600>This is to represent the qualities that inhere in drugs measured by a standardized pharmacological unit.
+E.g.
+1 unit of heparin is the quantity required to keep 1 mL of cat&apos;s blood fluid for 24 hours at 0°C.
+1 unit of insulin is the amount required to reduce the concentration of blood glucose in a fasting rabbit to 45 mg/dl (2.5 mmol/L).</obo:IAO_0000600>
+        <rdfs:label xml:lang="en">active ingredient aggregate biological activity</rdfs:label>
+        <rdfs:label xml:lang="fr">activité biologique d&apos;un aggrégat d&apos;ingrédient actif</rdfs:label>
+    </Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
