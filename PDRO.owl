@@ -14,7 +14,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl/16.07.01"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl/16.08.03"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/OMRSE_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/VO_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/PDRO/imports/OBI_import.owl"/>
@@ -45,6 +45,12 @@
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_note -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_note"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
     
 
 
@@ -106,13 +112,14 @@
     <!-- http://purl.obolibrary.org/obo/DRON_00000031 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/DRON_00000031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <obo:IAO_0000115 xml:lang="en">a treatment that has as participants an extended organism and a drug product and that results in part of the drug product being located in the extended organism.</obo:IAO_0000115>
         <PDRO_note xml:lang="en">We suggest that drug administration be removed as a subclass of treatment or that it be renamed drug treatment.
 
 1. Not all administrations of a drug product to an organism are an instance of treatment. They could be for example, for prophylaxis, for diagnosis, etc.
 
 2. Not all instances of drug administrations in a treatment satisfy the definition of treatment, where it would need to result in an alleviation of signs/symptoms. (e.g. first dose administration of an antibiotic).</PDRO_note>
-        <rdfs:label xml:lang="fr">administration de dose</rdfs:label>
+        <rdfs:label xml:lang="fr">administration de médicament</rdfs:label>
     </rdf:Description>
     
 
@@ -213,10 +220,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since a drug dispensing process.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis une distribution de médicaments.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">time elapsed since dispensing statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une distribution</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the time elapsed since a drug dispensing process.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de temps écoulé depuis une distribution de médicaments.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant le temps écoulé depuis une distribution</rdfs:label>
+        <rdfs:label xml:lang="en">time elapsed since dispensing condition</rdfs:label>
     </owl:Class>
     
 
@@ -729,32 +736,18 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000024"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000112>&quot;agitation is observed&quot;</obo:IAO_0000112>
+        <obo:IAO_0000112>&quot;if patient is agitated&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing a sign being observed in an individual.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant un signe observé par un individu.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">presence of sign statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant la présence d&apos;un signe</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040"/>
-        <obo:IAO_0000112 xml:lang="en">the current hour is before 5 PM on January 1st 2016</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <obo:IAO_0000115 xml:lang="en">A current time statement where the current time is described in relation to an interval of time.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">interval of time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle relativement à un intervalle de temps</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition  that is true if and only if some sign is observed in an individual.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant la présence d&apos;un signe</rdfs:label>
+        <rdfs:label xml:lang="en">presence of sign condition</rdfs:label>
     </owl:Class>
     
 
@@ -764,8 +757,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is less than some duration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">less than some time elapsed since previous dose statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose condition  that is true if and only if the time having elapsed is less than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some time elapsed since previous dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -869,9 +862,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000055">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
-        <obo:IAO_0000112 xml:lang="en">it is before 12 PM on January 1st 2016</obo:IAO_0000112>
-        <rdfs:label xml:lang="en">current time is before some instant statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle avant un instant</rdfs:label>
+        <obo:IAO_0000112 xml:lang="en">if it is before 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="en">current time is before some instant condition</rdfs:label>
     </owl:Class>
     
 
@@ -880,9 +872,9 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000056">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
-        <obo:IAO_0000112 xml:lang="en">it is after 12 PM on January 1st 2016</obo:IAO_0000112>
-        <rdfs:label xml:lang="en">current time is after some instant statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle après un instant</rdfs:label>
+        <obo:IAO_0000112 xml:lang="en">if it is after 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="fr">condition situant la période actuelle après un instant</rdfs:label>
+        <rdfs:label xml:lang="en">current time is after some instant condition</rdfs:label>
     </owl:Class>
     
 
@@ -891,9 +883,9 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000072"/>
-        <obo:IAO_0000112 xml:lang="en">it is 12 PM on January 1st 2016</obo:IAO_0000112>
-        <rdfs:label xml:lang="en">current time is some instant statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé affirmant que l&apos;instant présent est un instant donné</rdfs:label>
+        <obo:IAO_0000112 xml:lang="en">if it is 12 PM on January 1st 2016</obo:IAO_0000112>
+        <rdfs:label xml:lang="fr">condition affirmant que l&apos;instant présent est approximativement un instant donné</rdfs:label>
+        <rdfs:label xml:lang="en">current time is approximately some instant condition</rdfs:label>
     </owl:Class>
     
 
@@ -903,8 +895,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is greater than some duration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">greater than some time elapsed since previous dose statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose condition  that is true if and only if the time having elapsed is greater than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some time elapsed since previous dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -914,8 +906,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose statement where the time having elapsed is equal to some duration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">exactly some time elapsed since previous dose statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A time elapsed since previous dose condition that is true if and only if the time having elapsed is equal to some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">exactly some time elapsed since previous dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -954,18 +946,6 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000060 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112>&quot;The current day is before the 2nd of August 2015.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time takes place before some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle avant un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000061 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000061">
@@ -988,42 +968,6 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000063 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000063">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;It is the first month of the year 2016.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time starts some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle au début d&apos;un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000064 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000064">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;The current hour is during the afternoon of the 1st of January 2016.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time is during some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle pendant un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000065 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000065">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112>&quot;It is the last day of the current week.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time finishes some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle à la fin d&apos;un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000066 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000066">
@@ -1031,18 +975,6 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A category value specification that specifies one day of the week.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">day of the week category specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000067 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000067">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112>&quot;The current year is after 2015.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time takes place after some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle après un intervalle de temps</rdfs:label>
     </owl:Class>
     
 
@@ -1060,27 +992,15 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000069 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000069">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;The current week overlaps with the 2nd of August 2016.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time overlaps with some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle à cheval sur un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000070">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since the first dose administration of some drug administration.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis la première administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">time elapsed since first dose statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une première administration de dose</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the time elapsed since the first dose administration of some drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de temps écoulé depuis la première administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant le temps écoulé depuis une première administration de dose</rdfs:label>
+        <rdfs:label xml:lang="en">time elapsed since first dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -1090,10 +1010,10 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010053"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since the previous dose administration of some drug administration.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de temps écoulé depuis la dernière administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">time elapsed since previous dose statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une précédente administration de dose</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the time elapsed since the previous dose administration of some drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de temps écoulé depuis la dernière administration de dose d&apos;une certaine administration de médicament.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant le temps écoulé depuis une précédente administration de dose</rdfs:label>
+        <rdfs:label xml:lang="en">time elapsed since previous dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -1109,22 +1029,9 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A current time statement where the current time is described in relation to a temporal instant.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé sur la période actuelle situant la période actuelle relativement à un instant donné.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">instant of time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle relativement à un instant</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000073 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000073">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;The current date is the 1st of January 2016.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time is equal to some interval statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé affirmant que la période actuelle est un intervalle de temps donné</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A current time condition where the current time is described in relation to a temporal instant.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition sur la période actuelle situant la période actuelle relativement à un instant donné.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">instant of time condition</rdfs:label>
     </owl:Class>
     
 
@@ -1137,30 +1044,6 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
         <obo:IAO_0000115 xml:lang="fr">Un établissement de santé qui a pour fonction d&apos;entreposer, préparer, distribuer et surveiller l&apos;utilisation des médicaments parmi les patients d&apos;une zone géographique donnée ou suivis dans une organisation de soin donnée.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pharmacy facility</rdfs:label>
         <rdfs:label xml:lang="fr">établissement de pharmacologie</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000075 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000075">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;It is the day before the second tuesday of the current month.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time meets before some interval of time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle juste avant un intervalle de temps</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000076 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000076">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000042"/>
-        <obo:IAO_0000112 xml:lang="en">&quot;It is the month after january 2015.&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <rdfs:label xml:lang="en">current time meets after some interval of time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé situant la période actuelle juste après un intervalle de temps</rdfs:label>
     </owl:Class>
     
 
@@ -1186,7 +1069,7 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1194,8 +1077,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the number of doses administered in some drug administration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">number of doses in drug administration statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the number of doses administered in some drug administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">number of doses in drug administration condition</rdfs:label>
     </owl:Class>
     
 
@@ -1205,8 +1088,8 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where exactly some number of dose administrations have occured.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">exactly some number of doses in drug administration statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration condition that is true if and only if exactly some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">exactly some number of doses in drug administration condition</rdfs:label>
     </owl:Class>
     
 
@@ -1256,8 +1139,8 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000082">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where less than some number of dose administrations have occured.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">less than some number of doses have occured statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration condition  that is true if and only if less than some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">less than some number of doses have occured condition</rdfs:label>
     </owl:Class>
     
 
@@ -1267,8 +1150,8 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000083">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000078"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000124"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration statement where greater than some number of dose administrations have occured.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">greater than some number of doses have occured statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses in drug administration condition  that is true if and only if more than some number of dose administrations have occured.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some number of doses have occured condition</rdfs:label>
     </owl:Class>
     
 
@@ -1277,7 +1160,8 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000084">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000000"/>
-        <rdfs:label xml:lang="en">greater than some time elapsed since the previous dispensing statement</rdfs:label>
+        <obo:IAO_0000115>a condition  that is true if and only if the time elapsed since some dispensing is greater than some duration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">greater than some time elapsed since the previous dispensing condition</rdfs:label>
     </owl:Class>
     
 
@@ -1405,11 +1289,11 @@ A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IA
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <obo:IAO_0000112 xml:lang="en">&apos;it is the day after the end of the drug administration specified by &quot;Prednisone 10mg PO die x 1 week&quot;&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some process.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">after some process statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition that is true if and only if some process has ended</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some process condition</rdfs:label>
     </owl:Class>
     
 
@@ -1419,8 +1303,8 @@ A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IA
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000091">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some drug administration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">after some drug administration statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition that is true  if and only if some drug administration has ended</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some drug administration condition</rdfs:label>
     </owl:Class>
     
 
@@ -1430,8 +1314,8 @@ A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IA
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000092">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some dose administration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">after some dose administration statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition that is true if and only if some dose administration has ended</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some dose administration condition</rdfs:label>
     </owl:Class>
     
 
@@ -1441,8 +1325,8 @@ A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IA
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000093">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000090"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement localizing the present moment as being after the completion of some surgery.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">after some surgery statement</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition that is true if and only if some surgery has ended</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">after some surgery condition</rdfs:label>
     </owl:Class>
     
 
@@ -1454,6 +1338,7 @@ A patient mixing 4g of cholestyramine powder in a glass of orange juice.</obo:IA
         <obo:IAO_0000111 xml:lang="en">anatomical site of dose administration specification</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that specifies an anatomical entity which should be in contact with the drug product being administered during a dose administration.</obo:IAO_0000115>
+        <obo:IAO_0000231>for prescriptions, we only require the representation of &apos;condition&apos; (e.g. what follows &quot;PRN&quot;)  and do not need to formalize &apos;statement&apos;</obo:IAO_0000231>
         <rdfs:label xml:lang="en">site of administration specification</rdfs:label>
     </owl:Class>
     
@@ -1897,7 +1782,7 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A condition for continuing a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A condition whose truthfulness is a prerequisite for continuing a drug administration.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">continuing condition</obo:IAO_0000118>
         <rdfs:label xml:lang="en">continuing drug administration condition</rdfs:label>
     </owl:Class>
@@ -1911,7 +1796,7 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
         <obo:IAO_0000112 xml:lang="en">&apos;if bronchitis&apos;
 &apos;if January 1 2016&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A condition for starting a drug administration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A condition whose truthfulness is a prerequisite for starting a drug administration.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">starting condition</obo:IAO_0000118>
         <rdfs:label xml:lang="en">starting drug administration condition</rdfs:label>
     </owl:Class>
@@ -1921,9 +1806,9 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement whose truthfullness is a prerequisite for something</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that describes some relationships between some entities and whose truthfullness is a prerequisite for something</obo:IAO_0000115>
         <rdfs:label xml:lang="en">condition</rdfs:label>
     </owl:Class>
     
@@ -1932,16 +1817,11 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000139 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000139">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000058"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147"/>
         <obo:IAO_0000112 xml:lang="en">&apos;every 6 hours&apos; in &apos;every 6 hours PRN&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true only if the amount of time that has elapsed since the previous dose is greater than some duration.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true if and only if the amount of time that has elapsed since the previous dose is greater than some duration.</obo:IAO_0000115>
+        <obo:IAO_0000116>see note for maximum dosage condition. The same applies to this entitiy and &apos;greater than some time elapsed since previous dose condition&apos;</obo:IAO_0000116>
         <rdfs:label xml:lang="en">minimum dosing interval condition</rdfs:label>
     </owl:Class>
     
@@ -1950,16 +1830,11 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000146 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000146">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010050"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000147"/>
         <obo:IAO_0000112 xml:lang="en">&apos;maximum 4g/24h&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true only if the amount of drug product administered has not exceeded a certain amount per unit of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A dosing condition that is true if and only if the amount of drug product administered to a patient has not exceeded a certain amount per unit of time.</obo:IAO_0000115>
+        <obo:IAO_0000116>an instance of this condition would also be an instance of &apos;less than or equal to total dosage condition&apos;. TODO: We need to be able to infer this without asserted multiple inheritance. An ideal solution would be introducing some sort of &quot;role&quot; for ICE in order to distinguish what a condition can be used for (what it&apos;s truthfulness is a prerequisite for) from it&apos;s logical construction (what information it is composed of). -RT</obo:IAO_0000116>
         <rdfs:label xml:lang="en">maximum dosage condition</rdfs:label>
     </owl:Class>
     
@@ -1973,7 +1848,7 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
 &apos;8 hours have elapsed since the previous dose&apos;
 &apos;it is wednesday&apos;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A condition for the taking of a dose.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A condition whose truthfulness is a prerequisite for the taking of a dose.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">dosing condition</rdfs:label>
     </owl:Class>
     
@@ -2377,7 +2252,7 @@ Elle indique :
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000112>e=entity
 r=relationship
 
@@ -2399,10 +2274,10 @@ r1: e2 experiencing e1
 &quot;The traffic light is green&quot;
 &quot;You have not taken a dose in the last 6 hours&quot;
 &quot;less than 12 dispensings have occurred&quot;</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that describes some relationships between some entities and is intended to be evaluated as true or false.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">statement</rdfs:label>
         <rdfs:label xml:lang="fr">énoncé</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -2552,7 +2427,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010038 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010038">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -2562,10 +2437,9 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <obo:IAO_0000112>&quot;You have chest pain&quot;
 &quot;You are having trouble breathing&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing a symptom being experienced by an individual.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant un symptôme expérimenté par un individu.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">presence of symptom statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant la présence d&apos;un symptôme</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition  that is true if and only if some symptom is observed in an individual.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant la présence d&apos;un symptôme</rdfs:label>
+        <rdfs:label xml:lang="en">presence of symptom condition</rdfs:label>
     </owl:Class>
     
 
@@ -2573,13 +2447,12 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010039">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
-        <obo:IAO_0000112>&quot;patient is asleep&quot;</obo:IAO_0000112>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
+        <obo:IAO_0000112>&quot;if patient is asleep&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the state of conciousness of an organism.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant l&apos;état de conscience d&apos;un organisme.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">state of consciousness statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant un état de concience</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition  that is true if and only if an individual is observed as being in some state of consciousness.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant un état de concience</rdfs:label>
+        <rdfs:label xml:lang="en">state of consciousness condition</rdfs:label>
     </owl:Class>
     
 
@@ -2587,14 +2460,11 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010040">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
-        <obo:IAO_0000112>&quot;The current time is 4:00 PM.&quot;
-&quot;The current day is monday.&quot;</obo:IAO_0000112>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement localizing the current time period relative to some other time period.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé situant la période actuelle relativement à une autre période.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">current time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé sur la période actuelle</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition that describes the current time period relative to some other time period</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une condition situant la période actuelle relativement à une autre période.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">current time condition</rdfs:label>
     </owl:Class>
     
 
@@ -2602,7 +2472,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2613,10 +2483,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
 &quot;14 days have elapsed since the start of treatment&quot;
 &quot;6 hours have elapsed since the previous dose&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the amount of time that has elapsed since an event.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le temps écoulé depuis un évènement.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">time elapsed statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé de temps écoulé</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the amount of time that has elapsed since an event.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant le temps écoulé depuis un évènement.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de temps écoulé</rdfs:label>
+        <rdfs:label xml:lang="en">time elapsed condition</rdfs:label>
     </owl:Class>
     
 
@@ -2624,7 +2494,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2638,10 +2508,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the number of dose administrations that have occured over a given duration of time.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre d&apos;administration de doses qui se sont produites pendant une certaine durée de temps.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">number of doses per unit time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé décrivant le nombre de doses par unité de temps</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the number of dose administrations that have occured over a given duration of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant le nombre d&apos;administration de doses qui se sont produites pendant une certaine durée de temps.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition décrivant le nombre de doses par unité de temps</rdfs:label>
+        <rdfs:label xml:lang="en">number of doses per unit time condition</rdfs:label>
     </owl:Class>
     
 
@@ -2652,10 +2522,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
         <obo:IAO_0000112>&quot;less than 3 dose administrations have occured in the last 15 minutes&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses statement where the number of dose administrations having occured is less than a specified number.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant inférieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">less than some number of doses per unit time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est inférieur à</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses condition  that is true if and only if the number of dose administrations having occured is less than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant le nombre de doses par unité de temps comme étant inférieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant que le nombre de doses par unité de temps est inférieur à</rdfs:label>
+        <rdfs:label xml:lang="en">less than some number of doses per unit time condition</rdfs:label>
     </owl:Class>
     
 
@@ -2666,10 +2536,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
         <obo:IAO_0000112>&quot;greater than 1 dose has occured in the last 6 hours&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses statement where the number of dose administrations having occured is greater than a specified number.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant supérieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">greater than some number of doses per unit time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est supérieur à</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses condition  that is true if and only if the number of dose administrations having occured is greater than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant le nombre de doses par unité de temps comme étant supérieur à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant que le nombre de doses par unité de temps est supérieur à</rdfs:label>
+        <rdfs:label xml:lang="en">greater than some number of doses per unit time condition</rdfs:label>
     </owl:Class>
     
 
@@ -2680,10 +2550,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010042"/>
         <obo:IAO_0000112>&quot;1 dose administration has occured in the last day&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of doses statement where a specified number of dose administrations have occured.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant le nombre de doses par unité de temps comme étant égal à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">exactly some number of doses per unit time statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant que le nombre de doses par unité de temps est égal à</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of doses condition  that is true if and only if a specified number of dose administrations have occured.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant le nombre de doses par unité de temps comme étant égal à un certain nombre d&apos;administration de doses.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant que le nombre de doses par unité de temps est égal à</rdfs:label>
+        <rdfs:label xml:lang="en">exactly some number of doses per unit time condition</rdfs:label>
     </owl:Class>
     
 
@@ -2691,7 +2561,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -2699,10 +2569,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the number of dispensings that have occurred as part of a certain prescription.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé d&apos;une prescription décrivant un nombre de distributions passées.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">number of dispensings statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant un nombre de distributions passées</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A condition describing the number of dispensings that have occurred as directed by a certain prescription.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Une condition d&apos;une prescription décrivant un nombre de distributions passées.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant un nombre de distributions passées</rdfs:label>
+        <rdfs:label xml:lang="en">number of dispensings condition</rdfs:label>
     </owl:Class>
     
 
@@ -2711,12 +2581,12 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010048">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010046"/>
-        <obo:IAO_0000112>&quot;Less than one dispensing has occurred&quot;</obo:IAO_0000112>
+        <obo:IAO_0000112>&quot;if less than one dispensing has occurred&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A number of dispensings statement where the number of dispensings having occurred is less than a specified number.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de nombre de distributions indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">less than some number of dispensings statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A number of dispensings condition that is true if and only if the number of dispensings having occurred is less than a specified number.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">Un condition de nombre de distributions indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant qu&apos;un nombre de distributions passées est plus petit qu&apos;un certain nombre</rdfs:label>
+        <rdfs:label xml:lang="en">less than some number of dispensings condition</rdfs:label>
     </owl:Class>
     
 
@@ -2724,7 +2594,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <!-- http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0000129"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2752,10 +2622,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         </rdfs:subClassOf>
         <obo:IAO_0000112>&quot;10 units of insulin have been administered in the last hour&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A statement describing the amount of drug product or active ingredient that has been administered in a given duration of time.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé décrivant la quantité de médicament ou d&apos;ingrédient actif qui a été administrée pendant une certaine période de temps.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">total dosage statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé de dosage total</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the amount of drug product or active ingredient that has been administered in a given duration of time.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition décrivant la quantité de médicament ou d&apos;ingrédient actif qui a été administrée pendant une certaine période de temps.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de dosage total</rdfs:label>
+        <rdfs:label xml:lang="en">total dosage condition</rdfs:label>
     </owl:Class>
     
 
@@ -2765,10 +2635,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010050">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is less or equal to a specified amount.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est inférieur ou égal à une certaine quantité.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">less than or equal to total dosage statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé de dosage total inférieur ou égal à une certaine quantité</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A total dosage condition that is true if and only if the total dosage administered is less or equal to a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de dosage total où le dosage total administré est inférieur ou égal à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de dosage total inférieur ou égal à une certaine quantité</rdfs:label>
+        <rdfs:label xml:lang="en">less than or equal to total dosage condition</rdfs:label>
     </owl:Class>
     
 
@@ -2778,10 +2648,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010051">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is greater than a specified amount.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est supérieur à une certaine quantité.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">greater than total dosage statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé de dosage total supérieur à une certaine quantité</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A total dosage condition that is true if and only if the total dosage administered is greater than a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de dosage total où le dosage total administré est supérieur à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de dosage total supérieur à une certaine quantité</rdfs:label>
+        <rdfs:label xml:lang="en">greater than total dosage condition</rdfs:label>
     </owl:Class>
     
 
@@ -2791,10 +2661,10 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010049"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A total dosage statement where the total dosage administered is equal to a specified amount.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="fr">Un énoncé de dosage total où le dosage total administré est égal à une certaine quantité.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">equal to total dosage statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé de dosage total égal à une certaine quantité</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A total dosage condition  that is true if and only if the total dosage administered is equal to a specified amount.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="fr">une condition de dosage total où le dosage total administré est égal à une certaine quantité.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de dosage total égal à une certaine quantité</rdfs:label>
+        <rdfs:label xml:lang="en">equal to total dosage condition</rdfs:label>
     </owl:Class>
     
 
@@ -2805,9 +2675,9 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010041"/>
         <obo:IAO_0000112 xml:lang="en">&quot;6 hours have elapsed since the previous dose of metoprolol 50mg oral tablets&quot;</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statement of the time elapsed since a dose administration.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">time elapsed since dose statement</rdfs:label>
-        <rdfs:label xml:lang="fr">énoncé indiquant le temps écoulé depuis une administration de dose</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">a condition describing the time elapsed since a dose administration.</obo:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition indiquant le temps écoulé depuis une administration de dose</rdfs:label>
+        <rdfs:label xml:lang="en">time elapsed since dose condition</rdfs:label>
     </owl:Class>
     
 
@@ -2816,13 +2686,6 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO/PDRO.owl#PDRO_0010080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/VO_0000574"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A category value specification that specifies one route of administration from a standardized list of possible routes.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">route of administration category specification</rdfs:label>
@@ -2955,6 +2818,9 @@ E.g.
         <rdfs:label xml:lang="en">active ingredient aggregate biological activity</rdfs:label>
         <rdfs:label xml:lang="fr">activité biologique d&apos;un aggrégat d&apos;ingrédient actif</rdfs:label>
     </owl:Class>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
 </rdf:RDF>
 
 
