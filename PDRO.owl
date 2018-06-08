@@ -1217,7 +1217,7 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <PDRO:IAO_0000115 xml:lang="en">A number of doses in drug administration condition  that is true if and only if less than some number of dose administrations have occured.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="fr">Une condition de nombre de doses d’administration de médicament qui est vraie si et seulement si moins d’un certain nombre d’administration de doses ont été effectuées.</PDRO:IAO_0000115>
-        <rdfs:label xml:lang="fr">condition de temps minimum passé depuis une distribution de médicament</rdfs:label>
+        <rdfs:label xml:lang="fr">condition de nombre d’administration de doses maximum</rdfs:label>
         <rdfs:label xml:lang="en">less than some number of doses have occured condition</rdfs:label>
     </owl:Class>
     
@@ -1242,6 +1242,7 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000000"/>
         <PDRO:IAO_0000115 xml:lang="fr">Une condition qui est vraie si et seulement si le temps écoulé depuis une certaine distribution est plus grand qu’une certaine durée.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="en">a condition  that is true if and only if the time elapsed since some dispensing is greater than some duration.</PDRO:IAO_0000115>
+        <rdfs:label xml:lang="fr">condition de temps minimum passé depuis une distribution de médicament</rdfs:label>
         <rdfs:label xml:lang="en">greater than some time elapsed since the previous dispensing condition</rdfs:label>
     </owl:Class>
     
@@ -1711,7 +1712,8 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <PDRO:IAO_0000115 xml:lang="en">A dose quantification specification that quantifies a dose by referring to the quantity of active ingredient administered in a dose administration.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="fr">Une spécification de quantification de dose spécifiant une quantité d’ingrédient actif à administrer lors d’une administration de dose.</PDRO:IAO_0000115>
-        <rdfs:label>active ingredient quantification specification</rdfs:label>
+        <rdfs:label xml:lang="en">active ingredient quantification specification</rdfs:label>
+        <rdfs:label xml:lang="fr">spécification de quantité d’ingrédient actif dans une dose</rdfs:label>
     </owl:Class>
     
 
@@ -2441,7 +2443,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <PDRO:IAO_0000115 xml:lang="en">A condition that describes the current time period relative to some other time period</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="fr">Une condition situant la période actuelle relativement à une autre période.</PDRO:IAO_0000115>
-        <rdfs:comment xml:lang="fr">condition sur le temps présent</rdfs:comment>
+        <rdfs:label xml:lang="fr">condition sur le temps présent</rdfs:label>
         <rdfs:label xml:lang="en">current time condition</rdfs:label>
     </owl:Class>
     
