@@ -2415,6 +2415,7 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <PDRO:IAO_0000112>&quot;You have chest pain&quot;
 &quot;You are having trouble breathing&quot;</PDRO:IAO_0000112>
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <PDRO:IAO_0000115 xml:lang="fr">Une condition qui est vraie si et seulement si un certain symptôme est présent chez un individu.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="en">A condition that is true if and only if some symptom is present in an individual.</PDRO:IAO_0000115>
         <rdfs:label xml:lang="fr">condition indiquant la présence d&apos;un symptôme</rdfs:label>
         <rdfs:label xml:lang="en">presence of symptom condition</rdfs:label>
