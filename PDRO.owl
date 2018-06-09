@@ -83,7 +83,8 @@
     <!-- http://purl.obolibrary.org/obo/PDRO_0000133 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO_0000133">
-        <rdfs:label>has minimum range value</rdfs:label>
+        <rdfs:label xml:lang="en">has minimum range value</rdfs:label>
+        <rdfs:label xml:lang="fr">a valeur minimale de gamme</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -91,7 +92,8 @@
     <!-- http://purl.obolibrary.org/obo/PDRO_0000134 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO_0000134">
-        <rdfs:label>has maximum range value</rdfs:label>
+        <rdfs:label xml:lang="en">has maximum range value</rdfs:label>
+        <rdfs:label xml:lang="fr">a valeur maximale de gamme</rdfs:label>
     </owl:DatatypeProperty>
     
 
