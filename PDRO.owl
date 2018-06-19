@@ -14,7 +14,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/PDRO.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO.owl/18.06.07"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/PDRO.owl/18.06.18"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/VO.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/obi/2016-10-11/obi.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl"/>
@@ -83,8 +83,8 @@
     <!-- http://purl.obolibrary.org/obo/PDRO_0000133 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO_0000133">
-        <rdfs:label xml:lang="en">has minimum range value</rdfs:label>
         <rdfs:label xml:lang="fr">a valeur minimale de gamme</rdfs:label>
+        <rdfs:label xml:lang="en">has minimum range value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -92,8 +92,8 @@
     <!-- http://purl.obolibrary.org/obo/PDRO_0000134 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/PDRO_0000134">
-        <rdfs:label xml:lang="en">has maximum range value</rdfs:label>
         <rdfs:label xml:lang="fr">a valeur maximale de gamme</rdfs:label>
+        <rdfs:label xml:lang="en">has maximum range value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1195,9 +1195,9 @@ The continuous infusion of 450 mg of amiodarone over 12 hours into a vein of Har
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_000008 -->
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000080 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000008">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <PDRO:IAO_0000112 xml:lang="en">A pharmacist selecting a package of Aspirin 81mg oral tablets from the pharmacy inventory shelf.
 A nurse selecting an ampoule of amiodarone 50mg/mL injectable solution from the ward&apos;s stock of drugs.
@@ -1259,21 +1259,6 @@ A doctor selecting a sample box of Spiriva 2.5mcg per puff Respimat Inhaler from
         <PDRO:IAO_0000115 xml:lang="fr">Un role de prestataire de soin qui fournit un service d&apos;identification, de préparation, de distribution et de contrôle de médicaments.</PDRO:IAO_0000115>
         <rdfs:label xml:lang="en">pharmacist role</rdfs:label>
         <rdfs:label xml:lang="fr">rôle de pharmacien</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PDRO_000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <PDRO:IAO_0000112 xml:lang="en">A nurse injecting 9mL of amiodarone 50mg/mL in 250 mL of D5 solution.
-A patient mixing 4g of cholestyramine powder in a glass of orange juice.</PDRO:IAO_0000112>
-        <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <PDRO:IAO_0000115 xml:lang="en">A process in which a drug product is modified in order to render it more suitable for patient administration.</PDRO:IAO_0000115>
-        <PDRO:IAO_0000115 xml:lang="fr">Un processus dans lequel un médicament est modifié de manière à le rendre plus approprié pour une administration au patient.</PDRO:IAO_0000115>
-        <rdfs:label xml:lang="en">drug preparation</rdfs:label>
-        <rdfs:label xml:lang="fr">préparation de médicament</rdfs:label>
     </owl:Class>
     
 
@@ -1402,9 +1387,9 @@ The DIN is also a tool to help in the follow-up of products on the market, recal
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_000010 -->
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000100 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000010">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1483,7 +1468,7 @@ There are two rate of administration plan specifications here, one for each chan
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_000019"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000190"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
@@ -1640,21 +1625,6 @@ There are two rate of administration plan specifications here, one for each chan
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_000012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO_000010"/>
-        <PDRO:IAO_0000112 xml:lang="en">John Smith being dispensed 60 Ativan 1mg oral tablets a 10th time as specified in the same prescription.
-
-John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after having being dispensed in september 30x metoprolol 100 mg oral tablets.</PDRO:IAO_0000112>
-        <PDRO:IAO_0000115 xml:lang="en">A drug dispensing process that follows an initial drug dispensing process, such that both processes are specified in the same drug prescription.</PDRO:IAO_0000115>
-        <PDRO:IAO_0000115 xml:lang="fr">Un processus de distribution de médicament qui suit un processus de distribution initial, lorsque les deux processus sont indiqués dans la même prescription médicale.</PDRO:IAO_0000115>
-        <rdfs:label xml:lang="en">drug renewal process</rdfs:label>
-        <rdfs:label xml:lang="fr">processus de renouvellement de médicament</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PDRO_0000120 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000120">
@@ -1689,6 +1659,21 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
         <PDRO:IAO_0000115 xml:lang="fr">Une spécification de valeur scalaire qui spécifie une valeur de masse par unité de temps.</PDRO:IAO_0000115>
         <rdfs:label xml:lang="en">mass per time value specification</rdfs:label>
         <rdfs:label xml:lang="fr">spécification de valeur de masse par unité de temps</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000100"/>
+        <PDRO:IAO_0000112 xml:lang="en">John Smith being dispensed 60 Ativan 1mg oral tablets a 10th time as specified in the same prescription.
+
+John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after having being dispensed in september 30x metoprolol 100 mg oral tablets.</PDRO:IAO_0000112>
+        <PDRO:IAO_0000115 xml:lang="en">A drug dispensing process that follows an initial drug dispensing process, such that both processes are specified in the same drug prescription.</PDRO:IAO_0000115>
+        <PDRO:IAO_0000115 xml:lang="fr">Un processus de distribution de médicament qui suit un processus de distribution initial, lorsque les deux processus sont indiqués dans la même prescription médicale.</PDRO:IAO_0000115>
+        <rdfs:label xml:lang="en">drug renewal process</rdfs:label>
+        <rdfs:label xml:lang="fr">processus de renouvellement de médicament</rdfs:label>
     </owl:Class>
     
 
@@ -1849,7 +1834,7 @@ John Smith being dispensed in october 30x metoprolol 100 mg oral tablets after h
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_000012"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000122"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <PDRO:IAO_0000112 xml:lang="en">&quot;1 dispensing per month&quot;
@@ -1887,10 +1872,10 @@ This is because the dispensing process is not specified to occur &apos;per unit 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_000016 -->
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000160 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO_000010"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000160">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000100"/>
         <PDRO:IAO_0000112 xml:lang="en">John Smith being dispensed 60x Ativan 1mg oral tablets for the first time</PDRO:IAO_0000112>
         <PDRO:IAO_0000115 xml:lang="en">A drug dispensing process that is the first time the patient is being provided with a particular drug following a particular prescription.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="fr">Un processus de distribution de médicament tel que ce médicament n&apos;a jamais été fourni au patient auparavant sur la base de cette prescription particulière.</PDRO:IAO_0000115>
@@ -1900,9 +1885,9 @@ This is because the dispensing process is not specified to occur &apos;per unit 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PDRO_000019 -->
+    <!-- http://purl.obolibrary.org/obo/PDRO_0000190 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_000019">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_0000190">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2054,7 +2039,7 @@ A health care objective could concern e.g., treatment, prophylaxis and contracep
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_000010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PDRO_0000100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2417,8 +2402,8 @@ Elle a une unité de la forme &quot;administrations de dose par unité de temps&
         <PDRO:IAO_0000112>&quot;You have chest pain&quot;
 &quot;You are having trouble breathing&quot;</PDRO:IAO_0000112>
         <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <PDRO:IAO_0000115 xml:lang="fr">Une condition qui est vraie si et seulement si un certain symptôme est présent chez un individu.</PDRO:IAO_0000115>
         <PDRO:IAO_0000115 xml:lang="en">A condition that is true if and only if some symptom is present in an individual.</PDRO:IAO_0000115>
+        <PDRO:IAO_0000115 xml:lang="fr">Une condition qui est vraie si et seulement si un certain symptôme est présent chez un individu.</PDRO:IAO_0000115>
         <rdfs:label xml:lang="fr">condition indiquant la présence d&apos;un symptôme</rdfs:label>
         <rdfs:label xml:lang="en">presence of symptom condition</rdfs:label>
     </owl:Class>
@@ -2740,6 +2725,21 @@ An INN is usually designated for the active part of the molecule only, to avoid 
         <PDRO:IAO_0000115 xml:lang="fr">Une entité textuelle qui permet l&apos;identification d&apos;un ingrédient actif.</PDRO:IAO_0000115>
         <rdfs:label xml:lang="en">active ingredient name</rdfs:label>
         <rdfs:label xml:lang="fr">nom d&apos;ingrédient actif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PDRO_1000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PDRO_1000009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <PDRO:IAO_0000112 xml:lang="en">A nurse injecting 9mL of amiodarone 50mg/mL in 250 mL of D5 solution.
+A patient mixing 4g of cholestyramine powder in a glass of orange juice.</PDRO:IAO_0000112>
+        <PDRO:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
+        <PDRO:IAO_0000115 xml:lang="en">A process in which a drug product is modified in order to render it more suitable for patient administration.</PDRO:IAO_0000115>
+        <PDRO:IAO_0000115 xml:lang="fr">Un processus dans lequel un médicament est modifié de manière à le rendre plus approprié pour une administration au patient.</PDRO:IAO_0000115>
+        <rdfs:label xml:lang="en">drug preparation</rdfs:label>
+        <rdfs:label xml:lang="fr">préparation de médicament</rdfs:label>
     </owl:Class>
     
 
