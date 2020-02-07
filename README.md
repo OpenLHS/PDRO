@@ -1,3 +1,3 @@
 # PDRO
 
-An Ontology of informationnal entities about drug prescriptions.
+An Ontology of informationnal entities about drug prescriptions and distribution reports.
