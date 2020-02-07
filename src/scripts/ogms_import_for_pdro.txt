@@ -1,0 +1,5 @@
+http://purl.obolibrary.org/obo/OGMS_0000020
+http://purl.obolibrary.org/obo/OGMS_0000024
+http://purl.obolibrary.org/obo/OGMS_0000039
+http://purl.obolibrary.org/obo/OGMS_0000090
+http://purl.obolibrary.org/obo/OGMS_0000103

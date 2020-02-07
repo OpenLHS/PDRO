@@ -1,0 +1,8 @@
+http://purl.obolibrary.org/obo/OPMI_0000100
+http://purl.obolibrary.org/obo/OPMI_0000324
+http://purl.obolibrary.org/obo/OPMI_0000095
+http://purl.obolibrary.org/obo/OPMI_0000098
+http://purl.obolibrary.org/obo/OPMI_0000096
+http://purl.obolibrary.org/obo/OPMI_0000102
+http://purl.obolibrary.org/obo/OPMI_0000097
+http://purl.obolibrary.org/obo/NCBITaxon_9606

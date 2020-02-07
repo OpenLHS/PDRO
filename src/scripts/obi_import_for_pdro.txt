@@ -1,0 +1,17 @@
+http://purl.obolibrary.org/obo/OBI_0000011
+http://purl.obolibrary.org/obo/OBI_0000093
+http://purl.obolibrary.org/obo/OBI_0000142
+http://purl.obolibrary.org/obo/OBI_0000299
+http://purl.obolibrary.org/obo/OBI_0000312
+http://purl.obolibrary.org/obo/OBI_0000576
+http://purl.obolibrary.org/obo/OBI_0000969
+http://purl.obolibrary.org/obo/OBI_0001141
+http://purl.obolibrary.org/obo/OBI_0001929
+http://purl.obolibrary.org/obo/OBI_0001930
+http://purl.obolibrary.org/obo/OBI_0001931
+http://purl.obolibrary.org/obo/OBI_0001933
+http://purl.obolibrary.org/obo/OBI_0001938
+http://purl.obolibrary.org/obo/OBI_0002139
+http://purl.obolibrary.org/obo/UO_0000095
+http://purl.obolibrary.org/obo/UO_0000105
+http://purl.obolibrary.org/obo/UO_0000002

@@ -1,0 +1,172 @@
+Prefix(:=<http://purl.obolibrary.org/obo/omiabis/dev/omiabis.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/omiabis/dev/omiabis.owl>
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Jan-Eric Litton")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Loreana Norlin")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Maria Anderberg")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Martin N. Fransson")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Mikael Eriksson")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Roxana Merino-Martinez")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Sanela Kjellqvist")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "William R. Hogan")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Alice Nzinga")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Mathias Brochhausen")
+Annotation(<http://purl.org/dc/elements/1.1/source> "MIABIS_v2_accepted"@en)
+Annotation(<http://purl.org/dc/elements/1.1/title> "Ontologized MIABIS"@en)
+Annotation(owl:versionInfo "development version"@en)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000027>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000104>))
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000310>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0000060>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001025>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001035>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000059>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000299>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000312>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (<http://purl.obolibrary.org/obo/IAO_0000115>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000117> (<http://purl.obolibrary.org/obo/IAO_0000117>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/contributor> (<http://purl.org/dc/elements/1.1/contributor>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/creator> (<http://purl.org/dc/elements/1.1/creator>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/source> (<http://purl.org/dc/elements/1.1/source>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/source> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/title> (<http://purl.org/dc/elements/1.1/title>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: rdfs:comment (rdfs:comment)
+
+AnnotationAssertion(rdfs:isDefinedBy rdfs:comment <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: rdfs:label (rdfs:label)
+
+AnnotationAssertion(rdfs:isDefinedBy rdfs:label <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: owl:versionInfo (owl:versionInfo)
+
+AnnotationAssertion(rdfs:isDefinedBy owl:versionInfo <http://www.w3.org/2002/07/owl.owl>)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000055> (<http://purl.obolibrary.org/obo/BFO_0000055>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/bfo.owl>)
+
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000059> (<http://purl.obolibrary.org/obo/BFO_0000059>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000059> <http://purl.obolibrary.org/obo/bfo.owl>)
+
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000299> (<http://purl.obolibrary.org/obo/OBI_0000299>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/obi.owl>)
+
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000312> (<http://purl.obolibrary.org/obo/OBI_0000312>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/obi.owl>)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: rdf:PlainLiteral (rdf:PlainLiteral)
+
+AnnotationAssertion(rdfs:isDefinedBy rdf:PlainLiteral <http://www.w3.org/1999/02/22-rdf-syntax-ns.owl>)
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (<http://purl.obolibrary.org/obo/IAO_0000027>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000104> (<http://purl.obolibrary.org/obo/IAO_0000104>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000104> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000310> (<http://purl.obolibrary.org/obo/IAO_0000310>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000310> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/OBI_0000011> (<http://purl.obolibrary.org/obo/OBI_0000011>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/obi.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/OMIABIS_0000060> (survey data)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMIABIS_0000060> "A data set that contains the outcome of a survey."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OMIABIS_0000060> "Alice Nzinga"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OMIABIS_0000060> "Mathias Brochhausen"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OMIABIS_0000060> <http://purl.obolibrary.org/obo/omiabis.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMIABIS_0000060> "survey data"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/OMIABIS_0000060> ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/OMIABIS_0001035>))
+SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0000060> <http://purl.obolibrary.org/obo/IAO_0000027>)
+
+# Class: <http://purl.obolibrary.org/obo/OMIABIS_0001025> (survey plan specification)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMIABIS_0001025> "A plan specification that is realized by  process of gathering information (e.g. by asking questions)."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OMIABIS_0001025> "Alice Nzinga"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OMIABIS_0001025> "Mathias Brochhausen"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OMIABIS_0001025> <http://purl.obolibrary.org/obo/omiabis.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMIABIS_0001025> "survey plan specification"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0001025> <http://purl.obolibrary.org/obo/IAO_0000104>)
+
+# Class: <http://purl.obolibrary.org/obo/OMIABIS_0001026> (medical record)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMIABIS_0001026> "A document that contains information representing health-relevant qualities of a patient written in a chronological manner and that is primarily used for patient care in a clinical setting."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OMIABIS_0001026> "Martin Fransson")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/OMIABIS_0001026> "It is a chronological written account of examination, treatment, medical history or complaints.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/OMIABIS_0001026> "It is used interchangeably with health record and medical chart.
+https://en.wikipedia.org/wiki/Medical_record")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OMIABIS_0001026> <http://purl.obolibrary.org/obo/omiabis.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMIABIS_0001026> "medical record"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0001026> <http://purl.obolibrary.org/obo/IAO_0000310>)
+
+# Class: <http://purl.obolibrary.org/obo/OMIABIS_0001035> (survey execution)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMIABIS_0001035> "A planned process that realizes the concretization of a survey to generate an output(survey data.)"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OMIABIS_0001035> <http://purl.obolibrary.org/obo/omiabis.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMIABIS_0001035> "survey execution"@en)
+EquivalentClasses(<http://purl.obolibrary.org/obo/OMIABIS_0001035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> <http://purl.obolibrary.org/obo/OMIABIS_0001025>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/OMIABIS_0000060>)))
+SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0001035> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+
+)

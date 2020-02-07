@@ -1,0 +1,216 @@
+Prefix(:=<http://purl.obolibrary.org/obo/opmi.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/opmi.owl>
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Becky Steck"@en)
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Christopher Park"@en)
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "John F. O’Toole"@en)
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Matthias Kretzler")
+Annotation(<http://purl.org/dc/elements/1.1/contributor> "Sean Mooney"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Asiyah Yu Lin")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Fred Dowd"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Hong Yu"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Jennifer Schaub"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Jie Zheng"@en)
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Qingliang Leon Li")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Yongqun \"Oliver\" He (YH)"@en)
+Annotation(<http://purl.org/dc/elements/1.1/date> "1-31-2020")
+Annotation(<http://purl.org/dc/elements/1.1/description> "OPMI is a biomedical ontology in the area of precision medicine and its related investigations. It is community-driven and developed by following the OBO Foundry ontology development principles."@en)
+Annotation(<http://purl.org/dc/elements/1.1/format> "OWL-DL"@en)
+Annotation(<http://purl.org/dc/elements/1.1/subject> "OPMI subject: Precision medicine and related investigations"@en)
+Annotation(<http://purl.org/dc/elements/1.1/title> "OPMI: Ontology of Precision Medicine and Investigation"@en)
+Annotation(<http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"@en)
+Annotation(owl:versionInfo "Vision Release: 1.0.96"@en)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000300>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000094>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000095>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000096>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000097>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000098>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000100>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000102>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000324>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000118>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/date>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/format>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/subject>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (<http://purl.obolibrary.org/obo/IAO_0000115>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000117> (<http://purl.obolibrary.org/obo/IAO_0000117>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000118> (<http://purl.obolibrary.org/obo/IAO_0000118>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000119> (<http://purl.obolibrary.org/obo/IAO_0000119>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/contributor> (<http://purl.org/dc/elements/1.1/contributor>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/creator> (<http://purl.org/dc/elements/1.1/creator>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/date> (<http://purl.org/dc/elements/1.1/date>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/description> (<http://purl.org/dc/elements/1.1/description>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/description> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/format> (<http://purl.org/dc/elements/1.1/format>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/format> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/subject> (<http://purl.org/dc/elements/1.1/subject>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/subject> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/title> (<http://purl.org/dc/elements/1.1/title>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/title> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/terms/license> (<http://purl.org/dc/terms/license>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/terms/license> <http://purl.org/dc/terms.owl>)
+
+# Annotation Property: rdfs:label (rdfs:label)
+
+AnnotationAssertion(rdfs:isDefinedBy rdfs:label <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: owl:versionInfo (owl:versionInfo)
+
+AnnotationAssertion(rdfs:isDefinedBy owl:versionInfo <http://www.w3.org/2002/07/owl.owl>)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/IAO_0000136> (<http://purl.obolibrary.org/obo/IAO_0000136>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/iao.owl>)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: rdf:PlainLiteral (rdf:PlainLiteral)
+
+AnnotationAssertion(rdfs:isDefinedBy rdf:PlainLiteral <http://www.w3.org/1999/02/22-rdf-syntax-ns.owl>)
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/IAO_0000300> (<http://purl.obolibrary.org/obo/IAO_0000300>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000300> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/NCBITaxon_9606> (<http://purl.obolibrary.org/obo/NCBITaxon_9606>)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/NCBITaxon_9606> "human")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/NCBITaxon_9606> "person")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/NCBITaxon_9606> <http://purl.obolibrary.org/obo/ncbitaxon.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000094> (person name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OPMI_0000094> "A name of a person, which can have different types")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000094> "human name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000094> "https://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000094> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000094> "person name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000094> <http://purl.obolibrary.org/obo/IAO_0000300>)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000094> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <http://purl.obolibrary.org/obo/NCBITaxon_9606>))
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000095> (person first name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000095> "Christian name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000095> "forename")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000095> "given name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000095> "https://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000095> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000095> "person first name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000095> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000096> (person last name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000096> "family name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000096> "surname")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000096> "https://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000096> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000096> "person last name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000096> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000097> (person middle name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000097> "https://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000097> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000097> "person middle name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000097> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000098> (person full name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000098> "https://en.wikipedia.org/wiki/Personal_name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000098> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000098> "person full name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000098> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000100> (birth name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OPMI_0000100> "A person name that is given at birth")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000100> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000100> "birth name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000100> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000102> (maiden name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OPMI_0000102> "A woman's surname before marriage")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OPMI_0000102> "Edison Ong, Oliver He")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OPMI_0000102> "https://en.wikipedia.org/wiki/Maiden_and_married_names")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000102> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000102> "maiden name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000102> <http://purl.obolibrary.org/obo/OPMI_0000096>)
+
+# Class: <http://purl.obolibrary.org/obo/OPMI_0000324> (person first and last name)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OPMI_0000324> "A person name that includes both the first and last name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OPMI_0000324> "Edison Ong, Oliver He")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000324> "first and last name")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/OPMI_0000324> "human first and last name")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OPMI_0000324> <http://purl.obolibrary.org/obo/opmi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OPMI_0000324> "person first and last name"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OPMI_0000324> <http://purl.obolibrary.org/obo/OPMI_0000094>)
+
+
+)

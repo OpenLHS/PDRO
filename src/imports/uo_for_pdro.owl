@@ -1,0 +1,63 @@
+Prefix(:=<http://purl.obolibrary.org/obo/uo.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/uo.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/IAO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000095>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000105>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UO_0000270>))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000002> (mass unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000002> "\"A unit which is a standard measure of the amount of matter/energy of a physical object.\" [Wikipedia:Wikipedia]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000002> "mass unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000002> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000003> (time unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000003> "\"A unit which is a standard measure of the dimension in which events occur in sequence.\" [Wikipedia:Wikipedia]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000003> "time unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000003> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000006> (substance unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000006> "\"A unit which is a standardised quantity of an element or compound with uniform composition.\" [Wikipedia:Wikipedia]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000006> "substance unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000006> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000095> (volume unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000095> "\"A unit which is a standard measure of the amount of space occupied by any substance, whether solid, liquid, or gas.\" [NIST:NIST]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000095> "volume unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000095> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000105> (frequency unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000105> "\"A unit which is a standard measure of the number of repetitive actions in a particular time.\" [NIST:NIST]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000105> "frequency unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000105> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+# Class: <http://purl.obolibrary.org/obo/UO_0000270> (volumetric flow rate unit)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UO_0000270> "\"A unit which is a standard measure of the volume of fluid which passes through a given surface per unit time .\" [Wikipedia:Wikipedia]"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UO_0000270> "volumetric flow rate unit"^^xsd:string)
+SubClassOf(<http://purl.obolibrary.org/obo/UO_0000270> <http://purl.obolibrary.org/obo/IAO_0000003>)
+
+
+)

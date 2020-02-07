@@ -1,0 +1,187 @@
+Prefix(:=<http://purl.obolibrary.org/obo/ogms.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/ogms.owl>
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Alan Ruttenberg")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Albert Goldfain")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Anand Kumar")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Barry Smith")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Bill Hogan")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Cornelius Rosse")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Daniel Merico")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Lindsay Cowell")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Richard Scheuermann")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Sivaram Arabandi")
+Annotation(<http://purl.org/dc/elements/1.1/creator> "Werner Ceusters")
+Annotation(<http://purl.org/dc/elements/1.1/date> "2009-08-07")
+Annotation(rdfs:comment "The Ontology for General Medical Science (OGMS) is based on the papers Toward an Ontological Treatment of Disease and Diagnosis and On Carcinomas and Other Pathological Entities. The ontology attempts to address some of the issues raised at the Workshop on Ontology of Diseases (Dallas, TX). OGMS was formerly called the clinical phenotype ontology. Terms from OGMS hang from the Basic Formal Ontology.
+
+The latest version of OGMS is always available at http://purl.obolibrary.org/obo/ogms.owl
+This is version 2018-11-27 aka 'v2018'
+
+
+The OGMS developer site is https://github.com/OGMS/ogms
+The discussion group is http://groups.google.com/group/ogms-discuss
+
+If you are interested in participating in the development of OGMS, please send email to baeverma@jcvi.org. Be sure to include a google-account username with your request (this will be the username associated with a gmail address).")
+Annotation(rdfs:comment "This ontology is in early development. Expect it to change.")
+Annotation(owl:versionInfo "2018-11-27")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000019>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0000011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000039>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000090>))
+Declaration(Class(<http://purl.obolibrary.org/obo/OGMS_0000103>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000116>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000119>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000412>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/date>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (<http://purl.obolibrary.org/obo/IAO_0000115>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000116> (<http://purl.obolibrary.org/obo/IAO_0000116>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000117> (<http://purl.obolibrary.org/obo/IAO_0000117>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000119> (<http://purl.obolibrary.org/obo/IAO_0000119>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000232> (<http://purl.obolibrary.org/obo/IAO_0000232>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000412> (<http://purl.obolibrary.org/obo/IAO_0000412>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/creator> (<http://purl.org/dc/elements/1.1/creator>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/creator> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: <http://purl.org/dc/elements/1.1/date> (<http://purl.org/dc/elements/1.1/date>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/elements/1.1.owl>)
+
+# Annotation Property: rdfs:comment (rdfs:comment)
+
+AnnotationAssertion(rdfs:isDefinedBy rdfs:comment <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: rdfs:label (rdfs:label)
+
+AnnotationAssertion(rdfs:isDefinedBy rdfs:label <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: owl:versionInfo (owl:versionInfo)
+
+AnnotationAssertion(rdfs:isDefinedBy owl:versionInfo <http://www.w3.org/2002/07/owl.owl>)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: rdf:PlainLiteral (rdf:PlainLiteral)
+
+AnnotationAssertion(rdfs:isDefinedBy rdf:PlainLiteral <http://www.w3.org/1999/02/22-rdf-syntax-ns.owl>)
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000001> (<http://purl.obolibrary.org/obo/BFO_0000001>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000001> <http://purl.obolibrary.org/obo/bfo.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000015> (<http://purl.obolibrary.org/obo/BFO_0000015>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/bfo.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000019> (<http://purl.obolibrary.org/obo/BFO_0000019>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000019> <http://purl.obolibrary.org/obo/bfo.owl>)
+
+# Class: <http://purl.obolibrary.org/obo/OBI_0000011> (planned process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0000011> "A processual entity that realizes a plan which is the concretization of a plan specification."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/obi.owl>)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/obi.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OBI_0000011> "planned process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <http://purl.obolibrary.org/obo/OGMS_0000020> (symptom)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000020> "A quality of a patient that is observed by the patient or a processual entity experienced by the patient, either of which is hypothesized by the patient to be a realization of a disease."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OGMS_0000020> "note: defined class")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000020> "http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000020> "creation date: 2010-11-18T11:02:10Z")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OGMS_0000020> <http://purl.obolibrary.org/obo/ogms.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000020> "symptom")
+SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000020> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/OGMS_0000024> (sign)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000024> "A quality of a patient, a material entity that is part of a patient, or a processual entity that a patient participates in, any one of which is observed in a physical examination and is deemed by the clinician to be of clinical significance."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OGMS_0000024> "note: defined class")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OGMS_0000024> "Albert Goldfain")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000024> "http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000024> "creation date: 2010-11-18T11:14:36Z")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OGMS_0000024> <http://purl.obolibrary.org/obo/ogms.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000024> "sign")
+SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000024> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/OGMS_0000039> (configuration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000039> "A quality which is an spatial arrangement or distribution of a(n) independent continuant(s) across a Three Dimensional Region."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OGMS_0000039> "Albert Goldfain")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000039> "http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000039> "creation date: 2009-06-23T11:36:24Z")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OGMS_0000039> <http://purl.obolibrary.org/obo/ogms.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000039> "configuration")
+SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000039> <http://purl.obolibrary.org/obo/BFO_0000019>)
+
+# Class: <http://purl.obolibrary.org/obo/OGMS_0000090> (treatment)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000090> "A planned process whose completion is hypothesized by a health care provider to eliminate, prevent, or alleviate the signs and symptoms of a disorder or pathological process"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OGMS_0000090> "Albert Goldfain")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000090> "http://code.google.com/p/ogms/issues/detail?id=35")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000090> "creation date: 2010-03-31T04:51:11Z")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OGMS_0000090> <http://purl.obolibrary.org/obo/ogms.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000090> "treatment")
+SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000090> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+# Class: <http://purl.obolibrary.org/obo/OGMS_0000103> (disease prophylaxis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OGMS_0000103> "A planned process whose completion is hypothesized by a health care provider to reduce the risk of developing a disorder or the signs and symptoms of a disorder."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OGMS_0000103> "Whether or not 'prophylaxis' and 'treatment' classes are disjoint is an open question.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/OGMS_0000103> "Albert Goldfain")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000119> <http://purl.obolibrary.org/obo/OGMS_0000103> "http://groups.google.com/group/ogms-discuss/browse_thread/thread/e42bde79218ee34e")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000232> <http://purl.obolibrary.org/obo/OGMS_0000103> "creation date: 2011-09-20T09:57:44Z")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OGMS_0000103> <http://purl.obolibrary.org/obo/ogms.owl>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OGMS_0000103> "disease prophylaxis")
+SubClassOf(<http://purl.obolibrary.org/obo/OGMS_0000103> <http://purl.obolibrary.org/obo/OBI_0000011>)
+
+
+)

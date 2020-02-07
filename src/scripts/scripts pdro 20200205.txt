@@ -1,0 +1,47 @@
+
+PDRO scripts
+
+	- IAO imports
+	
+robot extract --method BOT --input "TARGET_FOLDER\IAO\src\ontology\iao-edit.owl" --term-file iao_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\iao_for_pdro.owl
+
+	- HADO imports
+	
+robot extract --method BOT --input "C:\Depot_GitLab\ontologies\HADO\src\hado.owl" --term-file hado_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\hado_for_pdro.owl
+
+	- DRON imports
+
+robot extract --method BOT --input "TARGET_FOLDER\dron\dron-upper.owl" --term-file dron_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\dron_for_pdro.owl
+
+
+	- CHEBI imports
+
+robot extract --method BOT --input "TARGET_FOLDER\dron\dron-chebi.owl" --term-file chebi_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\chebi_for_pdro.owl
+
+	- OBI imports
+	
+robot extract --method BOT --input "TARGET_FOLDER\obi\src\ontology\obi-edit.owl" --term-file obi_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\obi_for_pdro.owl
+
+	- OGMS imports
+	
+robot extract --method BOT --input "TARGET_FOLDER\ogms\src\ontology\ogms.owl" --term-file ogms_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\ogms_for_pdro.owl
+
+	- OMRSE imports
+
+robot extract --method BOT --input "TARGET_FOLDER\OMRSE\omrse\omrse.owl" --term-file omrse_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\omrse_for_pdro.owl
+
+	- PATO imports
+
+robot extract --method BOT --input "TARGET_FOLDER\pato\pato-simple.owl" --term-file pato_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude convert --format ofn --output ..\imports\pato_for_pdro.owl
+
+	- OPMI import
+
+robot extract --method BOT --input "TARGET_FOLDER\opmi\src\ontology\opmi.owl" --term-file opmi_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\opmi_for_pdro.owl
+
+	- OMIABIS import
+
+robot extract --method BOT --input "TARGET_FOLDER\omiabis-dev\BFO2 omiabis\omiabis.owl" --term-file omiabis_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\omiabis_for_pdro.owl
+
+	- UO import
+
+robot extract --method MIREOT --input "TARGET_FOLDER\unit-ontology\uo-with-pato.owl" --upper-term "http://purl.obolibrary.org/obo/UO_0000000" --lower-term "http://purl.obolibrary.org/obo/UO_0000105" --lower-term "http://purl.obolibrary.org/obo/UO_0000002" --lower-term "http://purl.obolibrary.org/obo/UO_0000095" --lower-term "http://purl.obolibrary.org/obo/UO_0000003" --lower-term "http://purl.obolibrary.org/obo/UO_0000006" --lower-term "http://purl.obolibrary.org/obo/UO_0000270" --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\uo_for_pdro.owl
