@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/iao/iao-edit.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/iao/iao-main.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,7 +6,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/iao/iao-edit.owl>
+Ontology(<http://purl.obolibrary.org/obo/iao/iao-main.owl>
 Annotation(<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> "en"^^xsd:string)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "Adam Goldstein"@en)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "Alan Ruttenberg"@en)
@@ -43,10 +43,9 @@ Annotation(<http://purl.org/dc/elements/1.1/contributor> "Werner Ceusters"@en)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "William Duncan"@en)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "William Hogan"@en)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "Yongqun (Oliver) He"@en)
-Annotation(<http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/>)
+Annotation(<http://purl.org/dc/elements/1.1/license> "http://creativecommons.org/licenses/by/4.0/"^^xsd:string)
 Annotation(rdfs:comment "An information artifact is, loosely, a dependent continuant or its bearer that is created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO"@en)
-Annotation(rdfs:comment "IDs allocated to related efforts: PNO: IAO_0020000-IAO_0020999, D_ACTS: IAO_0021000-IAO_0021999"^^xsd:string)
-Annotation(rdfs:comment "IDs allocated to subdomains of IAO. pno.owl: IAO_0020000-IAO_0020999, d-acts.owl: IAO_0021000-IAO_0021999"^^xsd:string)
+Annotation(rdfs:comment "The Information Artifact Ontology (IAO) is licensed under the Creative Commons Attribution License (CC-BY) version 4.0. You are free to share (copy and redistribute the material in any medium or format) and adapt (remix, transform, and build upon the material) for any purpose, even commercially. for any purpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the license terms. You must give appropriate credit (by using the original ontology IRI for the whole ontology and original term IRIs for individual terms), provide a link to the license, and indicate if any changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. For more information see http://www.obofoundry.org/docs/Citation.html"^^xsd:string)
 Annotation(rdfs:seeAlso <https://github.com/information-artifact-ontology/IAO>)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
@@ -77,7 +76,6 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000039>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000136>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000142>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000219>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/IAO_0000235>))
 Declaration(AnnotationProperty(<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000111>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
@@ -91,7 +89,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000232>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000233>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000412>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/license>))
 ############################
 #   Annotation Properties
 ############################
@@ -156,9 +154,9 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000412> "imp
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/contributor> <http://purl.org/dc/elements/1.1.owl>)
 
-# Annotation Property: <http://purl.org/dc/terms/license> (<http://purl.org/dc/terms/license>)
+# Annotation Property: <http://purl.org/dc/elements/1.1/license> (<http://purl.org/dc/elements/1.1/license>)
 
-AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/terms/license> <http://purl.org/dc/terms.owl>)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/license> <http://purl.org/dc/elements/1.1.owl>)
 
 # Annotation Property: rdfs:comment (rdfs:comment)
 
@@ -236,19 +234,6 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/IAO_0000219> ""
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/iao.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000219> "denotes"@en)
 SubObjectPropertyOf(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000136>)
-InverseObjectProperties(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000235>)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/IAO_0000030>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0000219> <http://purl.obolibrary.org/obo/BFO_0000001>)
-
-# Object Property: <http://purl.obolibrary.org/obo/IAO_0000235> (denoted by)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/IAO_0000235> "inverse of the relation 'denotes'"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/IAO_0000235> "Person: Jie Zheng, Chris Stoeckert, Mike Conlon"@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/IAO_0000235> <https://github.com/information-artifact-ontology/IAO/issues/206>)
-AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000235> <http://purl.obolibrary.org/obo/iao.owl>)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000235> "denoted by"@en)
-ObjectPropertyDomain(<http://purl.obolibrary.org/obo/IAO_0000235> <http://purl.obolibrary.org/obo/BFO_0000001>)
-ObjectPropertyRange(<http://purl.obolibrary.org/obo/IAO_0000235> <http://purl.obolibrary.org/obo/IAO_0000030>)
 
 
 ############################

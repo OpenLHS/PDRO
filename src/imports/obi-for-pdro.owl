@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/obi/dev/obi-edit.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo/obi/obi-base.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,7 +6,7 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo/obi/dev/obi-edit.owl>
+Ontology(<http://purl.obolibrary.org/obo/obi/obi-base.owl>
 Annotation(<http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> "en"^^xsd:string)
 Annotation(<http://purl.obolibrary.org/obo/IAO_0000589> "Ontology for Biomedical Investigations"@en)
 Annotation(<http://purl.org/dc/elements/1.1/contributor> "Advisors for this project come from the IFOMIS group, Saarbruecken and from the Co-ODE group in Manchester"@en)
@@ -71,7 +71,9 @@ Annotation(<http://purl.org/dc/elements/1.1/description> "The Ontology for Biome
 Annotation(<http://purl.org/dc/elements/1.1/format> "OWL-DL"@en)
 Annotation(<http://purl.org/dc/elements/1.1/subject> "An ontology for the annotation of biomedical and functional genomics experiments."@en)
 Annotation(<http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/")
+Annotation(<http://purl.org/dc/terms/title> "Ontology for Biomedical Investigations")
 Annotation(rdfs:comment "Please cite the OBI consortium http://purl.obolibrary.org/obo/obi where traditional citation is called for. However it is adequate that individual terms be attributed simply by use of the identifying PURL for the term, in projects that refer to them."^^xsd:string)
+Annotation(owl:versionInfo "2020-08-26"^^xsd:string)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))
@@ -142,6 +144,7 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/format>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/subject>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(Datatype(rdfs:Literal))
 ############################
 #   Annotation Properties
@@ -223,6 +226,10 @@ AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/elements/1.1/subject> <
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/terms/license> <http://purl.org/dc/terms.owl>)
 
+# Annotation Property: <http://purl.org/dc/terms/title> (<http://purl.org/dc/terms/title>)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/dc/terms/title> <http://purl.org/dc/terms.owl>)
+
 # Annotation Property: rdfs:comment (rdfs:comment)
 
 AnnotationAssertion(rdfs:isDefinedBy rdfs:comment <http://www.w3.org/2000/01/rdf-schema.owl>)
@@ -230,6 +237,10 @@ AnnotationAssertion(rdfs:isDefinedBy rdfs:comment <http://www.w3.org/2000/01/rdf
 # Annotation Property: rdfs:label (rdfs:label)
 
 AnnotationAssertion(rdfs:isDefinedBy rdfs:label <http://www.w3.org/2000/01/rdf-schema.owl>)
+
+# Annotation Property: owl:versionInfo (owl:versionInfo)
+
+AnnotationAssertion(rdfs:isDefinedBy owl:versionInfo <http://www.w3.org/2002/07/owl.owl>)
 
 
 ############################
@@ -487,7 +498,7 @@ AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/NCBITaxon_9
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000111> <http://purl.obolibrary.org/obo/OBI_0000011> "planned process"^^xsd:string)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://purl.obolibrary.org/obo/OBI_0000011> "Injecting mice with a vaccine in order to test its efficacy"^^xsd:string)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/IAO_0000122>)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0000011> "A processual entity that realizes a plan which is the concretization of a plan specification."@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OBI_0000011> "A process that realizes a plan which is the concretization of a plan specification."@en)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OBI_0000011> "'Plan' includes a future direction sense. That can be problematic if plans are changed during their execution. There are however implicit contingencies for protocols that an agent has in his mind that can be considered part of the plan, even if the agent didn't have them in mind before. Therefore, a planned process can diverge from what the agent would have said the plan was before executing it, by adjusting to problems encountered during execution (e.g. choosing another reagent with equivalent properties, if the originally planned one has run out.)"^^xsd:string)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000116> <http://purl.obolibrary.org/obo/OBI_0000011> "We are only considering successfully completed planned processes. A plan may be modified, and details added during execution. For a given planned process, the associated realized plan specification is the one encompassing all changes made during execution. This means that all processes in which an agent acts towards achieving some 
 objectives is a planned process."^^xsd:string)

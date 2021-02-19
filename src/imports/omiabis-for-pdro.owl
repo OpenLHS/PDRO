@@ -30,9 +30,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OMIABIS_0001035>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000055>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000059>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000299>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/OBI_0000312>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000059>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/contributor>))
@@ -43,11 +43,11 @@ Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
 #   Annotation Properties
 ############################
 
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (<http://purl.obolibrary.org/obo/IAO_0000115>)
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/iao.owl>)
 
-# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000117> (<http://purl.obolibrary.org/obo/IAO_0000117>)
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000117> (term editor)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.obolibrary.org/obo/iao.owl>)
 
@@ -84,19 +84,15 @@ AnnotationAssertion(rdfs:isDefinedBy owl:versionInfo <http://www.w3.org/2002/07/
 #   Object Properties
 ############################
 
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000055> (<http://purl.obolibrary.org/obo/BFO_0000055>)
+# Object Property: <http://purl.obolibrary.org/obo/BFO_0000055> (realizes)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.obolibrary.org/obo/bfo.owl>)
 
-# Object Property: <http://purl.obolibrary.org/obo/BFO_0000059> (<http://purl.obolibrary.org/obo/BFO_0000059>)
-
-AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/BFO_0000059> <http://purl.obolibrary.org/obo/bfo.owl>)
-
-# Object Property: <http://purl.obolibrary.org/obo/OBI_0000299> (<http://purl.obolibrary.org/obo/OBI_0000299>)
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000299> (has_specified_output)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/obi.owl>)
 
-# Object Property: <http://purl.obolibrary.org/obo/OBI_0000312> (<http://purl.obolibrary.org/obo/OBI_0000312>)
+# Object Property: <http://purl.obolibrary.org/obo/OBI_0000312> (is_specified_output_of)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000312> <http://purl.obolibrary.org/obo/obi.owl>)
 
@@ -114,19 +110,19 @@ AnnotationAssertion(rdfs:isDefinedBy rdf:PlainLiteral <http://www.w3.org/1999/02
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (<http://purl.obolibrary.org/obo/IAO_0000027>)
+# Class: <http://purl.obolibrary.org/obo/IAO_0000027> (data item)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/iao.owl>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000104> (<http://purl.obolibrary.org/obo/IAO_0000104>)
+# Class: <http://purl.obolibrary.org/obo/IAO_0000104> (plan specification)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000104> <http://purl.obolibrary.org/obo/iao.owl>)
 
-# Class: <http://purl.obolibrary.org/obo/IAO_0000310> (<http://purl.obolibrary.org/obo/IAO_0000310>)
+# Class: <http://purl.obolibrary.org/obo/IAO_0000310> (document)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/IAO_0000310> <http://purl.obolibrary.org/obo/iao.owl>)
 
-# Class: <http://purl.obolibrary.org/obo/OBI_0000011> (<http://purl.obolibrary.org/obo/OBI_0000011>)
+# Class: <http://purl.obolibrary.org/obo/OBI_0000011> (planned process)
 
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OBI_0000011> <http://purl.obolibrary.org/obo/obi.owl>)
 
@@ -165,7 +161,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0001026> <http://purl.obolibr
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/OMIABIS_0001035> "A planned process that realizes the concretization of a survey to generate an output(survey data.)"@en)
 AnnotationAssertion(rdfs:isDefinedBy <http://purl.obolibrary.org/obo/OMIABIS_0001035> <http://purl.obolibrary.org/obo/omiabis.owl>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/OMIABIS_0001035> "survey execution"@en)
-EquivalentClasses(<http://purl.obolibrary.org/obo/OMIABIS_0001035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> <http://purl.obolibrary.org/obo/OMIABIS_0001025>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/OMIABIS_0000060>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/OMIABIS_0001035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/OBI_0000011> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000059> <http://purl.obolibrary.org/obo/OMIABIS_0001025>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/OBI_0000299> <http://purl.obolibrary.org/obo/OMIABIS_0000060>)))
 SubClassOf(<http://purl.obolibrary.org/obo/OMIABIS_0001035> <http://purl.obolibrary.org/obo/OBI_0000011>)
 
 

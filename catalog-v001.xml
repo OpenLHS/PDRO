@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/uo.owl" uri="src/imports/uo_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/opmi.owl" uri="src/imports/opmi_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ro/core-subset.owl" uri="src/imports/core-subset.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl" uri="src/imports/bfo_classes_only.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/dron/dron-chebi.owl" uri="src/imports/chebi_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/dron/dron-upper.owl" uri="src/imports/dron_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/hado.owl" uri="src/imports/hado_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/iao/iao-edit.owl" uri="src/imports/iao_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/obi/dev/import/UO_imports.owl" uri="src/imports/uo_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/obi/dev/obi-edit.owl" uri="src/imports/obi_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/obi/obi_core.owl" uri="src/imports/ncbitaxon_homo_sapiens.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/ogms.owl" uri="src/imports/ogms_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/omiabis/dev/omiabis.owl" uri="src/imports/omiabis_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/omrse.owl" uri="src/imports/omrse_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/opmi.owl" uri="src/imports/opmi_for_pdro.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/pato/pato-simple.owl" uri="src/imports/pato_for_pdro.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="http://ontofox.hegroup.org/bp4cdnje.owl" uri="src/imports/homo-sapiens.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="http://ontofox.hegroup.org/fwc3ceai.owl" uri="src/imports/archives/occupiestemporalregion.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="http://purl.obolibrary.org/obo/bfo.owl" uri="src/imports/bfo-for-pdro.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="http://purl.obolibrary.org/obo/obi/obi_core.owl" uri="src/imports/archives/ncbitaxon_homo_sapiens.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="duplicate:http://purl.obolibrary.org/obo/pdro.owl" uri="pdro-base.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="duplicate:http://purl.obolibrary.org/obo/pdro.owl" uri="pdro_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="http://purl.obolibrary.org/obo/ro/core.owl" uri="src/imports/core-subset.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="shadowed:http://purl.obolibrary.org/obo/pdro.owl" uri="src/pdro.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="shadowed:http://purl.obolibrary.org/obo/pdro.owl" uri="src/imports/archives/pdro-base.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1613767931713" name="shadowed:http://purl.obolibrary.org/obo/pdro.owl" uri="src/imports/archives/pdro.owl"/>
+    </group>
 </catalog>
