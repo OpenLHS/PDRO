@@ -13,12 +13,15 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pdro.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/2020-02-05/pdro.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pdro/2021-06-08/pdro.owl"/>
         <dc:creator>Adrien Barton</dc:creator>
         <dc:creator>Jean-François Ethier</dc:creator>
         <dc:creator>Paul Fabry</dc:creator>
         <dc:creator>Ryeyan Taseen</dc:creator>
+        <terms:license>http://creativecommons.org/licenses/by/4.0/</terms:license>
+        <terms:title>Prescription DRugs Ontology</terms:title>
         <rdfs:comment xml:lang="en">An ontology of drug prescriptions - full version, imports merged.</rdfs:comment>
+        <owl:versionInfo>2021-06-08</owl:versionInfo>
     </owl:Ontology>
     
 

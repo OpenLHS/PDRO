@@ -15,12 +15,14 @@
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#"
      xmlns:external_byhand="http://purl.obolibrary.org/obo/vo/external/external_byhand.owl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pdro.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/2020-02-05/pdro.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pdro/2021-06-08/pdro.owl"/>
         <dc:creator>Adrien Barton</dc:creator>
         <dc:creator>Jean-François Ethier</dc:creator>
         <dc:creator>Paul Fabry</dc:creator>
         <dc:creator>Ryeyan Taseen</dc:creator>
-        <rdfs:comment xml:lang="en">An ontology of drug prescriptions - base version, no import.</rdfs:comment>
+        <terms:title>Prescription DRugs Ontology</terms:title>
+        <rdfs:comment xml:lang="en">An ontology of drug prescriptions - no import</rdfs:comment>
+        <owl:versionInfo>2021-06-08</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -93,6 +95,12 @@
     <!-- http://purl.org/dc/elements/1.1/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 

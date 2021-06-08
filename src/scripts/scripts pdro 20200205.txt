@@ -1,9 +1,15 @@
 
 PDRO scripts
 
+
 	- IAO imports
 	
-robot extract --method BOT --input "TARGET_FOLDER\IAO\src\ontology\iao-edit.owl" --term-file iao_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\iao_for_pdro.owl
+robot extract --method BOT --input "C:\Sources ontologies\obo-relations\core.owl" --term-file ro_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\ro-for-pdro.owl
+
+
+	- IAO imports
+	
+robot extract --method BOT --input "C:\Sources ontologies\IAO\releases\2017-03-24\iao.owl" --term-file iao_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\iao-for-pdro.owl
 
 	- HADO imports
 	
@@ -20,7 +26,7 @@ robot extract --method BOT --input "TARGET_FOLDER\dron\dron-chebi.owl" --term-fi
 
 	- OBI imports
 	
-robot extract --method BOT --input "TARGET_FOLDER\obi\src\ontology\obi-edit.owl" --term-file obi_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\obi_for_pdro.owl
+robot extract --method BOT --input "C:\Sources ontologies\obi\views\obi-base.owl" --term-file obi_import_for_pdro.txt --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\obi-for-pdro.owl
 
 	- OGMS imports
 	
@@ -45,3 +51,7 @@ robot extract --method BOT --input "TARGET_FOLDER\omiabis-dev\BFO2 omiabis\omiab
 	- UO import
 
 robot extract --method MIREOT --input "TARGET_FOLDER\unit-ontology\uo-with-pato.owl" --upper-term "http://purl.obolibrary.org/obo/UO_0000000" --lower-term "http://purl.obolibrary.org/obo/UO_0000105" --lower-term "http://purl.obolibrary.org/obo/UO_0000002" --lower-term "http://purl.obolibrary.org/obo/UO_0000095" --lower-term "http://purl.obolibrary.org/obo/UO_0000003" --lower-term "http://purl.obolibrary.org/obo/UO_0000006" --lower-term "http://purl.obolibrary.org/obo/UO_0000270" --copy-ontology-annotations true --annotate-with-source true --individuals exclude --imports exclude convert --format ofn --output ..\imports\uo_for_pdro.owl
+
+	-Merge
+
+robot merge --input ..\pdro.owl --output ..\..\pdro_merged.owl
